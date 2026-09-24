@@ -1,77 +1,51 @@
-"use me";
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { ShieldCheck, Calendar, MessageSquare, ArrowRight } from "lucide-react";
+import { ShieldCheck, MapPin } from "lucide-react";
 import { contactDetails } from "@/data/properties";
-import { InspectionModal } from "@/components/modals/InspectionModal";
 
 export function BannerSection() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const whatsappUrl = `https://wa.me/${contactDetails.whatsapp}?text=${encodeURIComponent(
-    "Hello Prestige Homes, I am interested in land allocation details for your Abuja estates."
-  )}`;
-
   return (
-    <section className="py-12 bg-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-950 aspect-[16/9] sm:aspect-[21/9] lg:aspect-[24/9]">
-          {/* Banner Image */}
+    <section className="py-12 sm:py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+        {/* Section Header */}
+        <div className="text-center space-y-2 max-w-3xl mx-auto">
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-brand-forest/10 border border-brand-forest/20 text-brand-forest text-xs font-extrabold uppercase tracking-wider">
+            <ShieldCheck className="w-4 h-4 text-brand-gold shrink-0" />
+            <span>FCT Abuja Infrastructure & Masterplan</span>
+          </div>
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Prestige Homes <span className="text-brand-forest">Development Overview</span>
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-600 font-medium">
+            Official infrastructure masterplan showcasing asphalt road networks, perimeter fencing, and solar grid layouts for Apo and Wasa District estates.
+          </p>
+        </div>
+
+        {/* Pure Standalone Picture (Zero Text Overlay / Zero Dark Gradient) */}
+        <div className="relative w-full rounded-3xl overflow-hidden shadow-2xl border border-surface-border bg-slate-50 transition-all hover:shadow-3xl">
           <Image
             src="/images/banner.jpg"
-            alt="Prestige Homes & Properties Ltd Abuja Estate Development Banner"
-            fill
-            className="object-cover opacity-90 hover:scale-105 transition-transform duration-700"
+            alt="Prestige Homes & Properties Ltd Official Estate Masterplan Banner"
+            width={1920}
+            height={800}
+            className="w-full h-auto object-cover rounded-3xl"
             priority
           />
+        </div>
 
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-transparent" />
-
-          {/* Overlay Content */}
-          <div className="absolute inset-0 p-6 sm:p-10 lg:p-12 flex flex-col justify-center max-w-2xl space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-gold/20 border border-brand-gold/40 text-brand-gold text-xs font-extrabold uppercase tracking-wider w-fit">
-              <ShieldCheck className="w-4 h-4 text-brand-gold shrink-0" />
-              <span>Institutional FCDA Land Banking</span>
-            </div>
-
-            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
-              Crafting Quality, <span className="text-brand-gold">Delivering Value</span>
-            </h2>
-
-            <p className="text-xs sm:text-base text-slate-200 leading-relaxed font-medium hidden sm:block">
-              Experience transparent land acquisition in Burum West District Apo and Wasa Expressway Corridor. Instant plot allocation, survey beacons, and 24-month payment duration.
-            </p>
-
-            <div className="pt-2 flex flex-wrap gap-3">
-              <button
-                onClick={() => setIsModalOpen(true)}
-                className="min-h-[48px] px-6 py-3 rounded-xl bg-brand-forest hover:bg-brand-forest-dark text-white font-extrabold text-xs sm:text-sm shadow-lg transition-all flex items-center justify-center gap-2 focus-visible:ring-2 focus-visible:ring-brand-forest focus-visible:outline-none"
-              >
-                <Calendar className="w-4 h-4 text-brand-gold shrink-0" />
-                <span>Book Guided Site Inspection</span>
-              </button>
-
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="min-h-[48px] px-6 py-3 rounded-xl bg-white/95 hover:bg-white text-slate-900 font-extrabold text-xs sm:text-sm shadow-lg transition-all flex items-center justify-center gap-2 focus-visible:ring-2 focus-visible:ring-brand-forest focus-visible:outline-none"
-              >
-                <MessageSquare className="w-4 h-4 text-brand-forest shrink-0" />
-                <span>WhatsApp Advisory</span>
-              </a>
-            </div>
+        {/* Picture Caption & Location Tag */}
+        <div className="flex flex-col sm:flex-row items-center justify-between p-4 rounded-2xl bg-surface-bg border border-surface-border gap-2 text-xs font-bold text-slate-700">
+          <div className="flex items-center gap-2">
+            <MapPin className="w-4 h-4 text-brand-gold shrink-0" />
+            <span>Federal Capital Territory (FCT), Abuja, Nigeria</span>
+          </div>
+          <div className="text-brand-forest font-extrabold">
+            {contactDetails.company} — {contactDetails.tagline}
           </div>
         </div>
       </div>
-
-      {isModalOpen && (
-        <InspectionModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-      )}
     </section>
   );
 }
