@@ -1,4 +1,3 @@
-"use me";
 "use client";
 
 import React, { useState } from "react";
@@ -88,12 +87,12 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Visual Showcase Side Container */}
+          {/* Homepage Header Banner Visual Showcase */}
           <div className="lg:col-span-5 relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3] group">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3] group bg-slate-900">
               <Image
-                src="/images/solar-city-apo.jpg"
-                alt="Solar City Apo Abuja Master-Planned Estate"
+                src="/images/banner.jpg"
+                alt="Prestige Homes & Properties Ltd Official Masterplan Header Banner"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 priority
@@ -103,14 +102,14 @@ export function Hero() {
                 <div className="flex items-center justify-between">
                   <div>
                     <span className="text-[10px] font-extrabold uppercase tracking-wider text-brand-gold bg-amber-50 px-2 py-0.5 rounded">
-                      Featured Project
+                      Official Header Banner
                     </span>
-                    <h3 className="text-lg font-extrabold text-slate-900 mt-0.5">Solar City Apo</h3>
-                    <p className="text-xs text-slate-600 font-bold">Burum West District, Apo</p>
+                    <h3 className="text-lg font-extrabold text-slate-900 mt-0.5">FCT Estate Masterplan</h3>
+                    <p className="text-xs text-slate-600 font-bold">Apo & Wasa District Corridors</p>
                   </div>
                   <div className="text-right">
                     <span className="text-[11px] text-slate-500 font-semibold block">Plots from</span>
-                    <span className="text-lg font-black text-brand-forest">₦9,000,000</span>
+                    <span className="text-lg font-black text-brand-forest">₦7,500,000</span>
                   </div>
                 </div>
               </div>

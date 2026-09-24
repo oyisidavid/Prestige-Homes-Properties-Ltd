@@ -82,10 +82,10 @@ export function Hero() {
 
           {/* Hero Image Showcase Container */}
           <div className="lg:col-span-5 relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3] group">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3] group bg-slate-900">
               <Image
-                src="/images/solar-city-apo.jpg"
-                alt="Solar City Apo Abuja Luxury Estate"
+                src="/images/banner.jpg"
+                alt="Prestige Homes & Properties Ltd Official Masterplan Header Banner"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 priority
@@ -94,13 +94,13 @@ export function Hero() {
               <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-white/90 backdrop-blur-md border border-white/40 shadow-lg">
                 <div className="flex items-center justify-between">
                   <div>
-                    <span className="text-xs font-bold uppercase tracking-wider text-brand-gold">Flagship Development</span>
-                    <h3 className="text-lg font-extrabold text-slate-900">Solar City Apo</h3>
-                    <p className="text-xs text-slate-600 font-medium">Burum West District, Apo Corridor</p>
+                    <span className="text-xs font-bold uppercase tracking-wider text-brand-gold">Official Header Banner</span>
+                    <h3 className="text-lg font-extrabold text-slate-900">FCT Estate Masterplan</h3>
+                    <p className="text-xs text-slate-600 font-medium">Apo Corridor & Wasa District</p>
                   </div>
                   <div className="text-right">
                     <span className="text-xs text-slate-500 block">Plots from</span>
-                    <span className="text-lg font-black text-brand-forest">₦9,000,000</span>
+                    <span className="text-lg font-black text-brand-forest">₦7,500,000</span>
                   </div>
                 </div>
               </div>
