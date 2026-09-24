@@ -23,6 +23,11 @@ export const metadata: Metadata = {
     "Verified Land Banking Nigeria",
   ],
   authors: [{ name: "Prestige Homes & Properties Ltd" }],
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

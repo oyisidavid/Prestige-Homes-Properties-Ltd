@@ -36,7 +36,7 @@ export function Hero() {
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
             <div className="space-y-2">
               <h1 className="text-3xl sm:text-4xl lg:text-6xl font-extrabold text-text-primary tracking-tight leading-[1.12]">
-                Institutional <span className="text-brand-forest">Land Banking</span> & Master-Planned Solar Estates in Abuja
+                Institutional <span className="text-brand-forest">Land Banking</span> & Master-Planned Estates in Abuja
               </h1>
               <p className="font-serif italic text-base sm:text-lg text-brand-gold font-semibold pt-1">
                 {contactDetails.tagline}
@@ -91,7 +91,7 @@ export function Hero() {
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3] group bg-slate-900">
               <Image
-                src="/images/banner.jpg"
+                src="/images/solar-city-apo.jpg"
                 alt="Prestige Homes & Properties Ltd Official Masterplan Header Banner"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
