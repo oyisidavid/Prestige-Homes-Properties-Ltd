@@ -19,13 +19,13 @@ export function Footer() {
               href="/"
               className="inline-block focus-visible:ring-2 focus-visible:ring-brand-forest rounded-xl transition-transform hover:scale-[1.02]"
             >
-              <div className="relative h-20 sm:h-24 w-auto min-w-[220px] bg-slate-900/80 p-2.5 rounded-2xl border border-slate-800 shadow-xl flex items-center">
+              <div className="relative h-20 sm:h-24 w-auto min-w-[220px] p-1 flex items-center">
                 <Image
-                  src="/images/whitelogoonblackbackground.jpg"
-                  alt="Prestige Homes & Properties Ltd Dark Logo"
+                  src="/images/whitelogoonblackbackground.png"
+                  alt="Prestige Homes & Properties Ltd Transparent Dark Logo"
                   width={380}
                   height={110}
-                  className="h-16 sm:h-20 w-auto object-contain rounded-lg"
+                  className="h-16 sm:h-20 w-auto object-contain"
                 />
               </div>
             </Link>

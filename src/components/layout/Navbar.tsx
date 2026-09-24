@@ -50,21 +50,21 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Main Navbar - Expanded Height for Highly Visible Logo */}
+      {/* Main Navbar - Large Clear Transparent Logo */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 sm:h-28 flex items-center justify-between">
-        {/* Prominent Brand Logo */}
+        {/* Transparent Logo Link to Home */}
         <Link
           href="/"
-          className="flex items-center group focus-visible:ring-2 focus-visible:ring-brand-forest focus-visible:outline-none rounded-xl p-1.5 transition-transform hover:scale-[1.02]"
+          className="flex items-center group focus-visible:ring-2 focus-visible:ring-brand-forest focus-visible:outline-none rounded-xl p-1 transition-transform hover:scale-[1.02]"
           aria-label="Prestige Homes & Properties Ltd Homepage"
         >
           <div className="relative h-16 sm:h-20 md:h-22 w-auto min-w-[180px] sm:min-w-[240px] flex items-center">
             <Image
-              src="/images/logowithwhitebackground.jpg"
-              alt="Prestige Homes & Properties Ltd Logo"
+              src="/images/logowithwhitebackground.png"
+              alt="Prestige Homes & Properties Ltd Transparent Logo"
               width={340}
               height={95}
-              className="h-16 sm:h-20 md:h-22 w-auto object-contain drop-shadow-sm rounded-lg"
+              className="h-16 sm:h-20 md:h-22 w-auto object-contain drop-shadow-sm"
               priority
             />
           </div>
