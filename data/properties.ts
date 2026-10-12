@@ -103,7 +103,14 @@ export const featuredEstates: EstateListing[] = [
         titleDocument: "FCDA C of O",
         status: "Selling",
         startingPrice: 54000000,
-        image: "/images/solar-city-apo.jpg",
+        image: "/images/properties/solar-city-1000sqm-block-flats-street.jpg",
+        gallery: [
+            "/images/properties/solar-city-1000sqm-block-flats-street.jpg",
+            "/images/properties/solar-city-1000sqm-block-flats-entrance.jpg",
+            "/images/properties/solar-city-1000sqm-block-flats-front.jpg",
+            "/images/properties/solar-city-1000sqm-block-flats-aerial.jpg",
+            "/images/properties/solar-city-1000sqm-block-flats-solar-carport.jpg",
+        ],
         description:
             "High-density multi-family residential plot in Solar City Apo, custom-designed for a modern 12-unit block of flats. Outstanding rental yield and institutional capital appreciation within Burum West District, with verified FCDA Certificate of Occupancy documentation, central solar utilities, and wide paved internal road network.",
         infrastructureProgress: 85,
