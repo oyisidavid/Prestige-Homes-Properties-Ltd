@@ -25,7 +25,7 @@ export function TrustRibbon() {
       icon: CalendarDays,
       stat: "Up to 24 Mos",
       label: "Structured Payment Plans",
-      subtext: "Flexible Outright & Deposit Terms",
+      subtext: "Transparent Pricing & Guaranteed Titles",
     },
   ];
 

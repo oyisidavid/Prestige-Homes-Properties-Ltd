@@ -173,7 +173,7 @@ export default function PropertiesPage() {
                 <div className="p-5 flex-1 flex flex-col justify-between space-y-5">
                   <div className="flex items-center justify-between p-3.5 rounded-xl bg-surface-bg border border-surface-border">
                     <div>
-                      <span className="text-[11px] font-bold uppercase text-slate-500 block">Outright Price</span>
+                      <span className="text-[11px] font-bold uppercase text-slate-500 block">Price</span>
                       <span className="text-xl font-black text-brand-forest">{formatNaira(estate.startingPrice)}</span>
                     </div>
                     <div className="text-right">

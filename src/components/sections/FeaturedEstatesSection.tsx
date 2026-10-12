@@ -31,8 +31,8 @@ export function FeaturedEstatesSection() {
 
   const filteredEstates = featuredEstates.filter((estate) => {
     if (selectedDistrictFilter === "all") return true;
-    if (selectedDistrictFilter === "apo") return estate.id === "solar-city-apo";
-    if (selectedDistrictFilter === "wasa") return estate.id === "the-embassy-wasa";
+    if (selectedDistrictFilter === "apo") return estate.district.toLowerCase().includes("apo");
+    if (selectedDistrictFilter === "wasa") return estate.district.toLowerCase().includes("wasa") || estate.id === "the-embassy-wasa";
     return true;
   });
 
@@ -155,7 +155,7 @@ export function FeaturedEstatesSection() {
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-xl bg-surface-bg border border-surface-border gap-2">
                     <div>
                       <span className="text-xs font-bold uppercase tracking-wider text-slate-500 block">
-                        Starting Outright Price
+                        Price
                       </span>
                       <span className="text-2xl font-black text-brand-forest">
                         {formatNaira(estate.startingPrice)}
@@ -163,10 +163,12 @@ export function FeaturedEstatesSection() {
                     </div>
                     <div className="text-left sm:text-right">
                       <span className="text-xs font-bold text-brand-gold-dark block">
-                        Flexible Payment Terms
+                        Plot Sizes Available
                       </span>
-                      <span className="text-xs text-slate-600 font-medium">
-                        Initial deposit from 20% • Up to 24 mos
+                      <span className="text-xs text-slate-700 font-extrabold">
+                        {estate.options.length === 1
+                          ? `${estate.options[0].sizeSqM} SqM`
+                          : `${estate.options[0].sizeSqM} - ${estate.options[estate.options.length - 1].sizeSqM} SqM`}
                       </span>
                     </div>
                   </div>

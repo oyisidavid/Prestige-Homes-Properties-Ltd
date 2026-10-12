@@ -81,15 +81,9 @@ export default async function PropertyDetailPage({ params }: PropertyDetailPageP
 
             <div className="flex flex-wrap items-center gap-6 lg:text-right border-t lg:border-t-0 lg:border-l border-slate-100 pt-4 lg:pt-0 lg:pl-8 shrink-0">
               <div>
-                <span className="text-xs font-bold text-slate-500 block uppercase tracking-wider">Outright Price</span>
+                <span className="text-xs font-bold text-slate-500 block uppercase tracking-wider">Price</span>
                 <span className="text-2xl sm:text-3xl font-black text-brand-forest">{formatNaira(estate.startingPrice)}</span>
               </div>
-              {estate.options[0]?.initialDepositNaira && (
-                <div className="border-l border-slate-200 pl-6">
-                  <span className="text-xs font-bold text-slate-500 block uppercase tracking-wider">Initial Deposit</span>
-                  <span className="text-xl sm:text-2xl font-black text-slate-900">{formatNaira(estate.options[0].initialDepositNaira)}</span>
-                </div>
-              )}
             </div>
           </div>
         </div>
@@ -128,9 +122,7 @@ export default async function PropertyDetailPage({ params }: PropertyDetailPageP
                     <tr className="bg-slate-100 text-slate-700 font-extrabold border-b border-slate-200">
                       <th className="p-3">Plot Size (SqM)</th>
                       <th className="p-3">Typology / Building Type</th>
-                      <th className="p-3">Outright Price</th>
-                      <th className="p-3">Initial Deposit</th>
-                      <th className="p-3">Monthly (12 Mos)</th>
+                      <th className="p-3 text-right">Price</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-100 font-medium">
@@ -138,19 +130,14 @@ export default async function PropertyDetailPage({ params }: PropertyDetailPageP
                       <tr key={idx} className="hover:bg-slate-50 text-slate-800">
                         <td className="p-3 font-extrabold text-brand-forest">{opt.sizeSqM} SqM</td>
                         <td className="p-3 text-slate-700 font-bold">{opt.typology || "Residential Plot"}</td>
-                        <td className="p-3 font-black text-slate-900">{formatNaira(opt.priceNaira)}</td>
-                        <td className="p-3 text-slate-600">
-                          {opt.initialDepositNaira ? formatNaira(opt.initialDepositNaira) : "20% Deposit"}
-                        </td>
-                        <td className="p-3 text-slate-600">
-                          {opt.monthlyInstallmentNaira ? formatNaira(opt.monthlyInstallmentNaira) : "Spread Plan"}
-                        </td>
+                        <td className="p-3 font-black text-slate-900 text-right">{formatNaira(opt.priceNaira)}</td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
               </div>
             </div>
+
 
             {/* Estate Infrastructure & Amenities */}
             <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-md border border-surface-border space-y-4">
@@ -172,9 +159,8 @@ export default async function PropertyDetailPage({ params }: PropertyDetailPageP
           <div className="lg:col-span-4 space-y-6">
             <div className="bg-white p-6 rounded-2xl shadow-xl border border-surface-border sticky top-24 space-y-6">
               <div className="space-y-1 border-b border-slate-100 pb-4">
-                <span className="text-xs font-bold uppercase tracking-wider text-slate-500 block">Outright Purchase Starting</span>
+                <span className="text-xs font-bold uppercase tracking-wider text-slate-500 block">Starting Price</span>
                 <span className="text-3xl font-black text-brand-forest">{formatNaira(estate.startingPrice)}</span>
-                <span className="text-xs text-brand-gold-dark font-bold block pt-1">Flexible 12 to 24 Months Payment Terms</span>
               </div>
 
               <div className="space-y-3">

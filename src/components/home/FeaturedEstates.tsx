@@ -119,7 +119,7 @@ export function FeaturedEstates() {
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-xl bg-surface-bg border border-surface-border gap-2">
                     <div>
                       <span className="text-xs font-bold uppercase tracking-wider text-slate-500 block">
-                        Starting Outright Price
+                        Price
                       </span>
                       <span className="text-2xl font-black text-brand-forest">
                         {formatNaira(estate.startingPrice)}

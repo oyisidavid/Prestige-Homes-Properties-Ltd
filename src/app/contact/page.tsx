@@ -161,7 +161,7 @@ export default function ContactPage() {
                     >
                       <option value="Physical On-Site Visit">Physical On-Site Visit (Guided Tour)</option>
                       <option value="Office Title Review">Office Consultation & Title Review</option>
-                      <option value="Plot Allocation Inquiry">Outright Plot Allocation Inquiry</option>
+                      <option value="Plot Allocation Inquiry">Plot Allocation Inquiry</option>
                     </select>
                   </div>
                 </div>
