@@ -1,6 +1,5 @@
 import React from "react";
 import { Hero } from "@/components/home/Hero";
-import { TrustRibbon } from "@/components/home/TrustRibbon";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { FeaturedEstates } from "@/components/home/FeaturedEstates";
 import { BannerSection } from "@/components/home/BannerSection";
@@ -13,10 +12,7 @@ export default function HomePage() {
       {/* 1. Hero Section */}
       <Hero />
 
-      {/* 2. Proof & Metrics Ribbon */}
-      <TrustRibbon />
-
-      {/* 3. Why Choose Us Section */}
+      {/* 2. Why Choose Us Section */}
       <WhyChooseUs />
 
       {/* 4. Featured Estates Showcase */}
