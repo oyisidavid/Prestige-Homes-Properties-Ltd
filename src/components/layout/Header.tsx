@@ -14,7 +14,7 @@ export function Header() {
   )}`;
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-surface-border bg-white/95 backdrop-blur-md transition-all">
+    <header className="sticky top-0 z-40 w-full border-b border-surface-border bg-white transition-all shadow-md">
       {/* Top Banner - Compliance & FCT Markets */}
       <div className="bg-brand-forest-dark text-white px-4 py-1.5 text-xs font-medium">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1 sm:gap-4">

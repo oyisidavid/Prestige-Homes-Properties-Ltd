@@ -13,7 +13,7 @@ import {
   Sparkles,
   ArrowRight,
 } from "lucide-react";
-import { featuredEstates, contactDetails } from "@/data/properties";
+import { featuredEstates, homeFeaturedEstates, contactDetails } from "@/data/properties";
 import { InspectionModal } from "@/components/modals/InspectionModal";
 
 export function FeaturedEstates() {
@@ -41,7 +41,7 @@ export function FeaturedEstates() {
               Featured <span className="text-brand-forest">Estates in Abuja</span>
             </h2>
             <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
-              Explore master-planned solar developments with FCDA Certificate of Occupancy documentation in Apo and Wasa District corridors.
+              Explore 6 featured master-planned developments and typologies with verifiable FCDA Approved titles across Sherretti Kabusa, Apo Burum West, and Wasa District corridors.
             </p>
           </div>
 
@@ -49,14 +49,14 @@ export function FeaturedEstates() {
             href="/properties"
             className="min-h-[44px] px-5 py-2.5 rounded-xl border-2 border-brand-forest text-brand-forest hover:bg-brand-forest hover:text-white font-extrabold text-sm transition-all flex items-center justify-center gap-2 shrink-0 focus-visible:ring-2 focus-visible:ring-brand-forest focus-visible:outline-none"
           >
-            <span>Browse Full Catalog</span>
+            <span>Browse Full Catalog ({featuredEstates.length} Listings)</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
 
-        {/* Featured Estates 2-Column Grid */}
+        {/* Featured Estates 2-Column Grid (6 Previews) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
-          {featuredEstates.map((estate) => {
+          {homeFeaturedEstates.map((estate) => {
             const whatsappUrl = `https://wa.me/${contactDetails.whatsapp}?text=${encodeURIComponent(
               `Hello Prestige Homes, I am interested in plot allocation options for ${estate.name} in ${estate.district}.`
             )}`;
@@ -130,7 +130,9 @@ export function FeaturedEstates() {
                         Plot Sizes Available
                       </span>
                       <span className="text-xs text-slate-700 font-extrabold">
-                        150 SqM to 1,000 SqM
+                        {estate.options.length === 1
+                          ? `${estate.options[0].sizeSqM} SqM`
+                          : `${estate.options[0].sizeSqM} - ${estate.options[estate.options.length - 1].sizeSqM} SqM`}
                       </span>
                     </div>
                   </div>

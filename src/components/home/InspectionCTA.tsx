@@ -41,7 +41,7 @@ export function InspectionCTA() {
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
-              Schedule Your Site Inspection in <span className="text-brand-gold">Apo or Wasa</span>
+              Schedule Your Site Inspection in <span className="text-brand-gold">Kabusa, Apo & Wasa</span>
             </h2>
 
             <p className="text-sm sm:text-base text-emerald-100 leading-relaxed">

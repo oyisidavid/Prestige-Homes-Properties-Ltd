@@ -1,13 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, Phone, Mail, MessageSquare, ArrowUpRight } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 import { contactDetails } from "@/data/properties";
 
 export function Footer() {
-  const whatsappUrl = `https://wa.me/${contactDetails.whatsapp}?text=${encodeURIComponent(
-    "Hello Prestige Homes, I am seeking consultation on verified FCDA titles and plot allocation."
-  )}`;
 
   return (
     <footer className="bg-slate-950 text-slate-300 border-t border-slate-800 pt-14 pb-12 sm:pt-16 sm:pb-14">

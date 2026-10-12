@@ -19,7 +19,7 @@ export function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-surface-border bg-white/98 backdrop-blur-md transition-all shadow-md">
+    <header className="sticky top-0 z-40 w-full border-b border-surface-border bg-white transition-all shadow-md">
       {/* Top Banner - FCDA Compliance & Headquarters (Hidden on mobile and tablet) */}
       <div className="hidden lg:block bg-brand-forest-dark text-white px-4 py-1.5 text-xs font-medium">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1 sm:gap-4">
@@ -46,8 +46,8 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Main Navbar - Logo with Company Name */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 lg:h-24 flex items-center justify-between gap-3 sm:gap-4">
+      {/* Main Navbar - Logo with Company Name & Tagline */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[64px] sm:h-20 lg:h-24 py-2 sm:py-0 flex items-center justify-between gap-3 sm:gap-4">
         {/* Logo and Company Name Branding Link */}
         <Link
           href="/"
@@ -73,7 +73,7 @@ export function Navbar() {
                 & Properties Ltd
               </span>
             </div>
-            <span className="text-[10px] sm:text-[11px] font-serif italic text-brand-gold font-bold leading-tight mt-1 hidden md:block">
+            <span className="text-[9px] sm:text-[10px] md:text-[11px] font-serif italic text-brand-gold font-bold leading-tight mt-0.5 sm:mt-1 block">
               ...crafting quality, Delivering value
             </span>
           </div>

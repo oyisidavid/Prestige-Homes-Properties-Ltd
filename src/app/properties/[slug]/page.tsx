@@ -101,20 +101,6 @@ export default async function PropertyDetailPage({ params }: PropertyDetailPageP
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                 {estate.description}
               </p>
-
-              {/* Infrastructure Progress */}
-              <div className="pt-4 border-t border-slate-100 space-y-2">
-                <div className="flex justify-between text-xs font-bold">
-                  <span className="text-slate-700">Subdivision & Infrastructure Completion</span>
-                  <span className="text-brand-forest font-extrabold">{estate.infrastructureProgress}% Completed</span>
-                </div>
-                <div className="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
-                  <div
-                    className="bg-brand-forest h-full rounded-full transition-all duration-1000"
-                    style={{ width: `${estate.infrastructureProgress}%` }}
-                  />
-                </div>
-              </div>
             </div>
 
             {/* Complete Plot Sizes & Pricing Breakdown Table */}
@@ -188,29 +174,21 @@ export default async function PropertyDetailPage({ params }: PropertyDetailPageP
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full min-h-[48px] bg-brand-forest hover:bg-brand-forest-dark text-white font-extrabold text-sm rounded-xl shadow-lg transition-colors flex items-center justify-center gap-2 focus-visible:ring-2 focus-visible:ring-brand-forest focus-visible:outline-none"
+                  className="w-full min-h-[48px] py-3 px-4 bg-brand-forest hover:bg-brand-forest-dark text-white font-extrabold text-sm rounded-xl shadow-md transition-all flex items-center justify-center gap-2.5 focus-visible:ring-2 focus-visible:ring-brand-forest focus-visible:outline-none"
                 >
-                  <MessageSquare className="w-4 h-4 text-brand-gold shrink-0" />
-                  <span>Request Plot Allocation via WhatsApp</span>
+                  <MessageSquare className="w-4 h-4 text-white shrink-0" />
+                  <span className="text-center">Request Plot Allocation via WhatsApp</span>
                 </a>
 
                 <a
                   href={`tel:${contactDetails.phone.replace(/\s+/g, "")}`}
-                  className="w-full min-h-[48px] border-2 border-brand-forest text-brand-forest font-extrabold text-sm rounded-xl hover:bg-brand-forest hover:text-white transition-colors flex items-center justify-center gap-2 focus-visible:ring-2 focus-visible:ring-brand-forest focus-visible:outline-none"
+                  className="w-full min-h-[48px] py-2.5 px-4 border-2 border-brand-forest text-brand-forest hover:bg-brand-forest hover:text-white font-extrabold text-sm rounded-xl transition-all flex items-center justify-center gap-2 focus-visible:ring-2 focus-visible:ring-brand-forest focus-visible:outline-none"
                 >
                   <Phone className="w-4 h-4 shrink-0" />
-                  <span>Call Land Advisory ({contactDetails.phone})</span>
+                  <span className="text-center leading-tight">
+                    Call Land Advisory <span className="block sm:inline whitespace-nowrap text-xs sm:text-sm font-bold">({contactDetails.phone})</span>
+                  </span>
                 </a>
-              </div>
-
-              <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-900 space-y-2">
-                <div className="flex items-center gap-1.5 font-extrabold">
-                  <ShieldCheck className="w-4 h-4 text-brand-gold shrink-0" />
-                  <span>FCDA C of O Guarantee</span>
-                </div>
-                <p className="text-slate-600 font-medium">
-                  Direct physical plot inspection and beacon verification available Monday through Saturday.
-                </p>
               </div>
             </div>
           </div>

@@ -105,11 +105,11 @@ export function Hero() {
                       Official Header Banner
                     </span>
                     <h3 className="text-lg font-extrabold text-slate-900 mt-0.5">FCT Estate Masterplan</h3>
-                    <p className="text-xs text-slate-600 font-bold">Apo & Wasa District Corridors</p>
+                    <p className="text-xs text-slate-600 font-bold">Sherretti Kabusa, Apo & Wasa</p>
                   </div>
                   <div className="text-right">
                     <span className="text-[11px] text-slate-500 font-semibold block">Plots from</span>
-                    <span className="text-lg font-black text-brand-forest">₦7,500,000</span>
+                    <span className="text-lg font-black text-brand-forest">₦7,000,000</span>
                   </div>
                 </div>
               </div>
@@ -147,6 +147,7 @@ export function Hero() {
                 className="w-full min-h-[44px] px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 font-bold text-sm focus:outline-none focus:ring-2 focus:ring-brand-forest"
               >
                 <option value="all">All Abuja Districts</option>
+                <option value="kabusa">Sherretti, Kabusa–Abuja</option>
                 <option value="apo">Burum West District, Apo</option>
                 <option value="wasa">Wasa District Corridor</option>
                 <option value="guzape">Guzape II Enclave</option>
