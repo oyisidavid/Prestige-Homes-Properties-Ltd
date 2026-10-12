@@ -20,6 +20,7 @@ export interface EstateListing {
     options: PropertyOption[];
     amenities: string[];
     image: string;
+    gallery?: string[];
     description: string;
     infrastructureProgress: number;
     coordinates?: string;
@@ -102,7 +103,7 @@ export const featuredEstates: EstateListing[] = [
         titleDocument: "FCDA C of O",
         status: "Selling",
         startingPrice: 54000000,
-        image: "/images/properties/1000sqm-12unit-blocks-of-flat.jpg",
+        image: "/images/solar-city-apo.jpg",
         description:
             "High-density multi-family residential plot in Solar City Apo, custom-designed for a modern 12-unit block of flats. Outstanding rental yield and institutional capital appreciation within Burum West District, with verified FCDA Certificate of Occupancy documentation, central solar utilities, and wide paved internal road network.",
         infrastructureProgress: 85,
@@ -120,7 +121,7 @@ export const featuredEstates: EstateListing[] = [
         amenities: [
             "Approved Architectural Design for 12 Units",
             "FCDA Verified C of O Title Documents",
-            "Immediate Physical Beaconing & Allocation",
+            "Immediate Physical Plot Allocation & Demarcation",
             "Independent Solar Streetlights & Power Grid",
             "Perimeter Wall & 24/7 Gated Security",
             "Central Water Treatment & Drainage System",
@@ -138,7 +139,7 @@ export const featuredEstates: EstateListing[] = [
         titleDocument: "FCDA C of O",
         status: "Selling",
         startingPrice: 31800000,
-        image: "/images/properties/600sqm-6bed-fully-detached-duplex.jpg",
+        image: "/images/solar-city-apo.jpg",
         description:
             "Ultra-luxury 6-bedroom fully detached duplex plot featuring an expansive 600 SqM footprint inside Solar City Apo. Designed for high-net-worth homeowners seeking privacy, generous grounds for swimming pool and landscaped gardens, penthouse lounge, and attached domestic quarters (BQ).",
         infrastructureProgress: 85,
@@ -174,9 +175,16 @@ export const featuredEstates: EstateListing[] = [
         titleDocument: "FCDA C of O",
         status: "Selling",
         startingPrice: 24000000,
-        image: "/images/properties/450sqm-5bed-fully-detached.jpg",
+        image: "/images/properties/solar-city-450sqm-fully-detached-front.jpg",
+        gallery: [
+            "/images/properties/solar-city-450sqm-fully-detached-front.jpg",
+            "/images/properties/solar-city-450sqm-fully-detached-street.jpg",
+            "/images/properties/solar-city-450sqm-fully-detached-pool.jpg",
+            "/images/properties/solar-city-450sqm-fully-detached-night.jpg",
+            "/images/properties/solar-city-450sqm-fully-detached-carport.jpg",
+        ],
         description:
-            "Executive 5-bedroom detached duplex plot tailored for family living and long-term prestige. Positioned along prime internal boulevards of Solar City Apo with immediate survey beacons, verified FCDA title, and seamless connection to the Apo-Gudu transit corridor.",
+            "Executive 5-bedroom detached duplex plot tailored for family living and long-term prestige. Positioned along prime internal boulevards of Solar City Apo with immediate layout demarcation, verified FCDA title, and seamless connection to the Apo-Gudu transit corridor.",
         infrastructureProgress: 85,
         category: "typology",
         options: [
@@ -210,7 +218,14 @@ export const featuredEstates: EstateListing[] = [
         titleDocument: "FCDA C of O",
         status: "Selling",
         startingPrice: 19000000,
-        image: "/images/properties/350sqm-4bed-fully-detached.jpg",
+        image: "/images/properties/solar-city-350sqm-fully-detached-front.jpg",
+        gallery: [
+            "/images/properties/solar-city-350sqm-fully-detached-front.jpg",
+            "/images/properties/solar-city-350sqm-fully-detached-entrance.jpg",
+            "/images/properties/solar-city-350sqm-fully-detached-side.jpg",
+            "/images/properties/solar-city-350sqm-fully-detached-approach.jpg",
+            "/images/properties/solar-city-350sqm-fully-detached-street.jpg",
+        ],
         description:
             "Contemporary 4-bedroom detached villa plot combining modern architectural aesthetics with functional urban luxury. Offers comfortable perimeter privacy, parking for 4 cars, and instant allocation within the master-planned Solar City Apo development.",
         infrastructureProgress: 85,
@@ -229,7 +244,7 @@ export const featuredEstates: EstateListing[] = [
             "4 Ensuite Bedrooms & Guest Powder Room",
             "Dedicated 4-Car Parking Courtyard",
             "FCDA C of O Verified Documentation",
-            "Immediate Site Beaconing & Survey",
+            "Immediate Site Allocation & Demarcation",
             "Solar Streetlights & Central Drainage",
             "Paved Asphalt Estate Access",
         ],
@@ -246,7 +261,13 @@ export const featuredEstates: EstateListing[] = [
         titleDocument: "FCDA C of O",
         status: "Selling",
         startingPrice: 13400000,
-        image: "/images/properties/250sqm-semi-detached-duplex.jpg",
+        image: "/images/properties/solar-city-250sqm-semi-detached-front.jpg",
+        gallery: [
+            "/images/properties/solar-city-250sqm-semi-detached-front.jpg",
+            "/images/properties/solar-city-250sqm-semi-detached-side.jpg",
+            "/images/properties/solar-city-250sqm-semi-detached-street.jpg",
+            "/images/properties/solar-city-250sqm-semi-detached-night.jpg",
+        ],
         description:
             "Sleek 4-bedroom semi-detached duplex design engineered for urban elegance and optimal land utilization in Burum West District, Apo. An exceptional high-yield asset for buy-to-let investors and private homeowners alike.",
         infrastructureProgress: 85,
@@ -282,7 +303,13 @@ export const featuredEstates: EstateListing[] = [
         titleDocument: "FCDA C of O",
         status: "Selling",
         startingPrice: 9000000,
-        image: "/images/properties/solarcity-170sqm-terrace-1.jpg",
+        image: "/images/properties/solar-city-170sqm-terrace-front.jpg",
+        gallery: [
+            "/images/properties/solar-city-170sqm-terrace-front.jpg",
+            "/images/properties/solar-city-170sqm-terrace-perspective.jpg",
+            "/images/properties/solar-city-170sqm-terrace-night.jpg",
+            "/images/properties/solar-city-170sqm-terrace-aerial.jpg",
+        ],
         description:
             "Smart 3-bedroom terrace duplex plot (Terrace 1) offering an accessible entry point into institutional land ownership in Apo, Abuja. Delivers guaranteed FCDA C of O documentation, solar electricity, and high capital growth along the Burum West corridor.",
         infrastructureProgress: 85,

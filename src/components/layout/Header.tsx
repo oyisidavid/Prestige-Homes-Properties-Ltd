@@ -145,7 +145,7 @@ export function Header() {
               Title Transparency & Compliance
             </Link>
             <Link
-              href="#inspection-booking"
+              href="/contact#inspection-form"
               onClick={() => setMobileMenuOpen(false)}
               className="py-2.5 px-3 rounded-md hover:bg-surface-bg hover:text-brand-forest"
             >

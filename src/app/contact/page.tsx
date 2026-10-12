@@ -2,13 +2,16 @@
 "use client";
 
 import React, { useState } from "react";
-import { MapPin, Phone, Mail, Clock, MessageSquare, ShieldCheck, CheckCircle2, User, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MessageSquare, ShieldCheck, CheckCircle2, User, Send, Calendar } from "lucide-react";
 import { contactDetails } from "@/data/properties";
 
 export default function ContactPage() {
   const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
+  const [selectedEstate, setSelectedEstate] = useState("Peace Crest Estate (Kabusa)");
+  const [inspectionType, setInspectionType] = useState("Physical On-Site Visit");
+  const [preferredDate, setPreferredDate] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
@@ -18,7 +21,7 @@ export default function ContactPage() {
   };
 
   const whatsappDirectUrl = `https://wa.me/${contactDetails.whatsapp}?text=${encodeURIComponent(
-    `Hello Prestige Homes, my name is ${fullName}. Message: ${message}`
+    `Hello Prestige Homes, I requested a site inspection for ${selectedEstate}. Name: ${fullName}, Phone: ${phone}, Mode: ${inspectionType}, Date: ${preferredDate || "Earliest Available"}. Details: ${message}`
   )}`;
 
   return (
@@ -38,9 +41,9 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-          {/* Office Details Card */}
-          <div className="lg:col-span-5 space-y-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          {/* Office Details Card - Sticky scrolling alongside form */}
+          <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
             <div className="bg-brand-forest text-white p-6 sm:p-8 rounded-3xl shadow-xl border border-brand-forest-dark/40 relative overflow-hidden space-y-6">
               <div className="absolute -top-12 -right-12 w-44 h-44 bg-white/5 rounded-full blur-2xl pointer-events-none" />
 
@@ -118,15 +121,52 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div className="lg:col-span-7 bg-white p-6 sm:p-8 rounded-2xl shadow-md border border-surface-border">
+          {/* Contact & Inspection Booking Form */}
+          <div id="inspection-form" className="lg:col-span-7 bg-white p-6 sm:p-8 rounded-3xl shadow-xl border border-surface-border scroll-mt-28">
             {!submitted ? (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="border-b border-slate-100 pb-4">
-                  <h3 className="text-xl font-extrabold text-slate-900">Send an Advisory Message</h3>
-                  <p className="text-xs text-slate-500 font-medium">Fill out the inquiry form below for direct response from our FCT desk.</p>
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-brand-forest text-xs font-bold uppercase mb-2">
+                    <Calendar className="w-3.5 h-3.5 text-brand-gold shrink-0" />
+                    <span>Site Inspection & Advisory Booking</span>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900">Schedule Site Inspection / Send Inquiry</h3>
+                  <p className="text-xs sm:text-sm text-slate-500 font-medium mt-1">
+                    Book an on-site guided tour or submit your plot requirements to our FCT land advisory desk.
+                  </p>
                 </div>
 
+                {/* Target Estate & Inspection Mode */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1.5">Target Estate</label>
+                    <select
+                      value={selectedEstate}
+                      onChange={(e) => setSelectedEstate(e.target.value)}
+                      className="w-full min-h-[44px] px-3.5 py-2.5 rounded-xl border border-slate-300 text-slate-900 text-sm font-bold focus:ring-2 focus:ring-brand-forest focus:outline-none bg-slate-50"
+                    >
+                      <option value="Peace Crest Estate (Kabusa)">Peace Crest Estate (Sherretti, Kabusa)</option>
+                      <option value="Solar City Apo (Burum West)">Solar City Apo (Burum West District)</option>
+                      <option value="The Embassy Wasa">The Embassy Wasa (Wasa Corridor)</option>
+                      <option value="General Land Banking">All Estates / General Advisory</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1.5">Inspection / Inquiry Type</label>
+                    <select
+                      value={inspectionType}
+                      onChange={(e) => setInspectionType(e.target.value)}
+                      className="w-full min-h-[44px] px-3.5 py-2.5 rounded-xl border border-slate-300 text-slate-900 text-sm font-bold focus:ring-2 focus:ring-brand-forest focus:outline-none bg-slate-50"
+                    >
+                      <option value="Physical On-Site Visit">Physical On-Site Visit (Guided Tour)</option>
+                      <option value="Office Title Review">Office Consultation & Title Review</option>
+                      <option value="Plot Allocation Inquiry">Outright Plot Allocation Inquiry</option>
+                    </select>
+                  </div>
+                </div>
+
+                {/* Name & Phone */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-bold text-slate-700 mb-1.5">Full Name</label>
@@ -159,38 +199,53 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div>
-                  <label className="block text-xs font-bold text-slate-700 mb-1.5">Email Address</label>
-                  <div className="relative">
-                    <Mail className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
-                    <input
-                      type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder="investor@example.com"
-                      className="w-full min-h-[44px] pl-10 pr-3 py-2.5 rounded-xl border border-slate-300 text-slate-900 text-sm font-medium focus:ring-2 focus:ring-brand-forest focus:outline-none"
-                    />
+                {/* Email & Preferred Date */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1.5">Email Address</label>
+                    <div className="relative">
+                      <Mail className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
+                      <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="investor@example.com"
+                        className="w-full min-h-[44px] pl-10 pr-3 py-2.5 rounded-xl border border-slate-300 text-slate-900 text-sm font-medium focus:ring-2 focus:ring-brand-forest focus:outline-none"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1.5">Preferred Date (Mon - Sat)</label>
+                    <div className="relative">
+                      <Calendar className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
+                      <input
+                        type="date"
+                        value={preferredDate}
+                        onChange={(e) => setPreferredDate(e.target.value)}
+                        className="w-full min-h-[44px] pl-10 pr-3 py-2.5 rounded-xl border border-slate-300 text-slate-900 text-sm font-medium focus:ring-2 focus:ring-brand-forest focus:outline-none"
+                      />
+                    </div>
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 mb-1.5">Your Message / Plot Requirements</label>
+                  <label className="block text-xs font-bold text-slate-700 mb-1.5">Specific Requirements / Notes (Optional)</label>
                   <textarea
-                    rows={4}
+                    rows={3}
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    placeholder="Describe your target plot size (e.g. 500 SqM in Solar City Apo) or installment terms needed..."
+                    placeholder="Specify plot size (e.g. 150 SqM, 250 SqM, 500 SqM in Peace Crest or Solar City Apo), installment duration, or special requests..."
                     className="w-full p-3.5 rounded-xl border border-slate-300 text-slate-900 text-sm font-medium focus:ring-2 focus:ring-brand-forest focus:outline-none"
-                    required
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full min-h-[48px] bg-brand-forest hover:bg-brand-forest-dark text-white font-extrabold text-sm rounded-xl shadow-lg transition-colors flex items-center justify-center gap-2 focus-visible:ring-2 focus-visible:ring-brand-forest focus-visible:outline-none"
+                  className="w-full min-h-[50px] bg-brand-forest hover:bg-brand-forest-dark text-white font-extrabold text-sm rounded-xl shadow-lg transition-colors flex items-center justify-center gap-2 focus-visible:ring-2 focus-visible:ring-brand-forest focus-visible:outline-none"
                 >
                   <Send className="w-4 h-4 text-brand-gold shrink-0" />
-                  <span>Submit Inquiry</span>
+                  <span>Submit Inspection Request</span>
                 </button>
               </form>
             ) : (

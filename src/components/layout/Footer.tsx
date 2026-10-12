@@ -70,7 +70,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href="/contact#inspection-form"
                   className="hover:text-emerald-400 transition-colors focus-visible:ring-2 focus-visible:ring-brand-forest rounded-md px-1 py-0.5 inline-block"
                 >
                   Schedule Site Inspection

@@ -13,6 +13,7 @@ import {
   Phone,
 } from "lucide-react";
 import { getEstateBySlug, contactDetails } from "@/data/properties";
+import { PropertyMediaGallery } from "@/components/properties/PropertyMediaGallery";
 
 interface PropertyDetailPageProps {
   params: Promise<{ slug: string }>;
@@ -41,53 +42,60 @@ export default async function PropertyDetailPage({ params }: PropertyDetailPageP
   return (
     <div className="py-10 bg-surface-canvas min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-        {/* Back Link */}
-        <div>
+        {/* Navigation & Status Breadcrumb */}
+        <div className="flex flex-wrap items-center justify-between gap-3">
           <Link
             href="/properties"
             className="inline-flex items-center gap-2 text-xs font-bold text-slate-600 hover:text-brand-forest transition-colors focus-visible:ring-2 focus-visible:ring-brand-forest rounded-md px-2 py-1"
           >
             <ArrowLeft className="w-4 h-4" /> Back to All Properties
           </Link>
-        </div>
-
-        {/* Hero Media Container */}
-        <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-slate-900 border border-surface-border aspect-[16/9] lg:aspect-[21/9]">
-          <Image
-            src={estate.image}
-            alt={`${estate.name} ${estate.district}`}
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
-
-          {/* Top Shield & Status Badges */}
-          <div className="absolute top-6 inset-x-6 flex items-center justify-between">
-            <span className="px-4 py-1.5 rounded-full text-xs font-extrabold uppercase bg-emerald-600 text-white shadow-lg">
+          <div className="flex items-center gap-2">
+            <span className="px-3.5 py-1 rounded-full text-xs font-extrabold uppercase bg-emerald-600 text-white shadow-sm">
               {estate.status}
             </span>
-
-            <div className="inline-flex items-center gap-2 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-full text-slate-900 font-extrabold text-xs shadow-lg border border-white/50">
-              <ShieldCheck className="w-4 h-4 text-brand-gold shrink-0" />
-              <span>{estate.titleDocument} Certified Title</span>
-            </div>
-          </div>
-
-          {/* Bottom Title Header */}
-          <div className="absolute bottom-6 inset-x-6 text-white space-y-2">
-            {estate.tagline && (
-              <span className="text-xs font-bold text-brand-gold bg-black/60 backdrop-blur-md px-3 py-1 rounded-md inline-block">
-                {estate.tagline}
-              </span>
-            )}
-            <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">{estate.name}</h1>
-            <p className="text-sm sm:text-base text-slate-200 flex items-center gap-1.5 font-medium">
-              <MapPin className="w-4 h-4 text-brand-gold shrink-0" />
-              <span>{estate.district}, {estate.city}</span>
-            </p>
+            <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-brand-forest px-3.5 py-1 rounded-full text-xs font-bold border border-emerald-200">
+              <ShieldCheck className="w-3.5 h-3.5 text-brand-gold shrink-0" />
+              {estate.titleDocument} Certified Title
+            </span>
           </div>
         </div>
+
+        {/* Executive Property Header Card (Above Gallery) */}
+        <div className="bg-white p-6 sm:p-8 rounded-3xl border border-surface-border shadow-sm">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+            <div className="space-y-2 max-w-2xl">
+              {estate.tagline && (
+                <span className="text-xs font-extrabold text-brand-gold uppercase tracking-wider bg-brand-gold/10 px-3.5 py-1 rounded-full inline-block">
+                  {estate.tagline}
+                </span>
+              )}
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+                {estate.name}
+              </h1>
+              <p className="text-sm sm:text-base text-slate-600 flex items-center gap-2 font-medium">
+                <MapPin className="w-4 h-4 text-brand-gold shrink-0" />
+                <span>{estate.district}, {estate.city}</span>
+              </p>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-6 lg:text-right border-t lg:border-t-0 lg:border-l border-slate-100 pt-4 lg:pt-0 lg:pl-8 shrink-0">
+              <div>
+                <span className="text-xs font-bold text-slate-500 block uppercase tracking-wider">Outright Price</span>
+                <span className="text-2xl sm:text-3xl font-black text-brand-forest">{formatNaira(estate.startingPrice)}</span>
+              </div>
+              {estate.options[0]?.initialDepositNaira && (
+                <div className="border-l border-slate-200 pl-6">
+                  <span className="text-xs font-bold text-slate-500 block uppercase tracking-wider">Initial Deposit</span>
+                  <span className="text-xl sm:text-2xl font-black text-slate-900">{formatNaira(estate.options[0].initialDepositNaira)}</span>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Hero Interactive Media Gallery */}
+        <PropertyMediaGallery estate={estate} />
 
         {/* Content Layout Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">

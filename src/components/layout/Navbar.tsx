@@ -107,10 +107,10 @@ export function Navbar() {
             })}
           </nav>
           <Link
-            href="/contact"
+            href="/contact#inspection-form"
             className="min-h-[46px] px-6 py-2.5 rounded-xl bg-brand-forest hover:bg-brand-forest-dark text-white font-extrabold text-sm shadow-md transition-all flex items-center gap-2 focus-visible:ring-2 focus-visible:ring-brand-forest focus-visible:outline-none"
           >
-            <span>Schedule Inspection</span>
+            <span>Schedule Site Inspection</span>
           </Link>
         </div>
 
@@ -149,7 +149,7 @@ export function Navbar() {
           </nav>
           <div className="pt-3 border-t border-surface-border flex flex-col gap-3">
             <Link
-              href="/contact"
+              href="/contact#inspection-form"
               onClick={() => setMobileMenuOpen(false)}
               className="min-h-[48px] w-full py-3 rounded-xl bg-brand-forest hover:bg-brand-forest-dark text-white font-black text-center flex items-center justify-center gap-2 shadow-md text-sm"
             >

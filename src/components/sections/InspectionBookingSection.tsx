@@ -11,7 +11,6 @@ export function InspectionBookingSection() {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [date, setDate] = useState("");
-  const [visitType, setVisitType] = useState<"physical" | "virtual">("physical");
   const [isSuccess, setIsSuccess] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -60,16 +59,16 @@ export function InspectionBookingSection() {
               <div className="flex items-start gap-3 p-3.5 rounded-xl bg-white/5 border border-white/10">
                 <CheckCircle2 className="w-5 h-5 text-brand-gold shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="text-sm font-bold text-white">Immediate Beacon Allocation</h4>
-                  <p className="text-xs text-emerald-200">Physical plot boundary verification & immediate layout subdivision coordinates.</p>
+                  <h4 className="text-sm font-bold text-white">Immediate Plot Allocation</h4>
+                  <p className="text-xs text-emerald-200">Physical plot boundary demarcation & approved layout coordinates.</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3 p-3.5 rounded-xl bg-white/5 border border-white/10">
                 <CheckCircle2 className="w-5 h-5 text-brand-gold shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="text-sm font-bold text-white">Flexible Shuttle Pickup</h4>
-                  <p className="text-xs text-emerald-200">Complimentary pick-up from our Apo office or Abuja airport corridor.</p>
+                  <h4 className="text-sm font-bold text-white">Dedicated Property Advisory</h4>
+                  <p className="text-xs text-emerald-200">Guided on-site walkthrough directly coordinated with our Apo corporate desk.</p>
                 </div>
               </div>
             </div>
@@ -80,7 +79,7 @@ export function InspectionBookingSection() {
             {!isSuccess ? (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="border-b border-slate-100 pb-4">
-                  <h3 className="text-xl font-extrabold text-slate-900">Book Site Visit / Virtual Tour</h3>
+                  <h3 className="text-xl font-extrabold text-slate-900">Book Site Inspection</h3>
                   <p className="text-xs text-slate-500 font-medium">No obligation inspection request with instant allocation advisor.</p>
                 </div>
 
@@ -99,35 +98,6 @@ export function InspectionBookingSection() {
                       </option>
                     ))}
                   </select>
-                </div>
-
-                {/* Visit Type Toggle */}
-                <div className="grid grid-cols-2 gap-3">
-                  <button
-                    type="button"
-                    onClick={() => setVisitType("physical")}
-                    className={`min-h-[44px] p-3 rounded-xl border text-xs font-bold flex items-center justify-center gap-2 ${
-                      visitType === "physical"
-                        ? "border-brand-forest bg-brand-forest/10 text-brand-forest"
-                        : "border-slate-200 text-slate-600 hover:bg-slate-50"
-                    }`}
-                  >
-                    <MapPin className="w-4 h-4 text-brand-forest" />
-                    <span>Physical On-Site Visit</span>
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={() => setVisitType("virtual")}
-                    className={`min-h-[44px] p-3 rounded-xl border text-xs font-bold flex items-center justify-center gap-2 ${
-                      visitType === "virtual"
-                        ? "border-brand-forest bg-brand-forest/10 text-brand-forest"
-                        : "border-slate-200 text-slate-600 hover:bg-slate-50"
-                    }`}
-                  >
-                    <Calendar className="w-4 h-4 text-brand-forest" />
-                    <span>Virtual Live Tour</span>
-                  </button>
                 </div>
 
                 {/* Name & Phone */}

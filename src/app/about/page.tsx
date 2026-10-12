@@ -37,7 +37,7 @@ export default function AboutPage() {
             </div>
             <h3 className="text-xl font-extrabold text-slate-900">Title Transparency</h3>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Every parcel in our portfolio undergoes thorough legal verification with the Federal Capital Development Authority (FCDA). We guarantee clean C of O titles and verified survey beacons.
+              Every parcel in our portfolio undergoes thorough legal verification with the Federal Capital Development Authority (FCDA). We guarantee clean C of O titles and approved layout plans.
             </p>
           </div>
 
@@ -57,7 +57,7 @@ export default function AboutPage() {
             </div>
             <h3 className="text-xl font-extrabold text-slate-900">Diaspora & HNWI Banking</h3>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              We provide frictionless remote plot allocation, virtual site walk-throughs, and structured 12 to 24-month installment plans for international diaspora investors.
+              We provide verified remote plot allocation, direct documentation verification, and structured 12 to 24-month installment plans for international diaspora investors.
             </p>
           </div>
         </div>

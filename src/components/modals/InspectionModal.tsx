@@ -17,7 +17,6 @@ export function InspectionModal({ isOpen, onClose, preselectedEstateId }: Inspec
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [date, setDate] = useState("");
-  const [visitType, setVisitType] = useState<"physical" | "virtual">("physical");
   const [submitted, setSubmitted] = useState(false);
 
   if (!isOpen) return null;
@@ -30,7 +29,7 @@ export function InspectionModal({ isOpen, onClose, preselectedEstateId }: Inspec
   const selectedEstate = featuredEstates.find((e) => e.id === estateId) || featuredEstates[0];
 
   const whatsappConfirmUrl = `https://wa.me/${contactDetails.whatsapp}?text=${encodeURIComponent(
-    `Hello Prestige Homes, I just scheduled a ${visitType} inspection for ${selectedEstate.name} (${selectedEstate.district}). Name: ${fullName}, Phone: ${phone}, Preferred Date: ${date}`
+    `Hello Prestige Homes, I just scheduled an on-site plot inspection for ${selectedEstate.name} (${selectedEstate.district}). Name: ${fullName}, Phone: ${phone}, Preferred Date: ${date}`
   )}`;
 
   return (
@@ -50,7 +49,7 @@ export function InspectionModal({ isOpen, onClose, preselectedEstateId }: Inspec
             <div className="mb-5">
               <div className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-forest uppercase tracking-wider bg-emerald-50 px-3 py-1 rounded-full mb-2">
                 <ShieldCheck className="w-3.5 h-3.5 text-brand-gold" />
-                <span>On-Site / Virtual Allocation Visit</span>
+                <span>On-Site Plot Allocation Visit</span>
               </div>
               <h3 className="text-xl font-extrabold text-slate-900">Book Site Inspection</h3>
               <p className="text-xs text-slate-500 font-medium">
@@ -74,34 +73,6 @@ export function InspectionModal({ isOpen, onClose, preselectedEstateId }: Inspec
                     </option>
                   ))}
                 </select>
-              </div>
-
-              {/* Visit Type */}
-              <div className="grid grid-cols-2 gap-3">
-                <button
-                  type="button"
-                  onClick={() => setVisitType("physical")}
-                  className={`min-h-[44px] p-2.5 rounded-lg border text-xs font-bold flex items-center justify-center gap-2 ${
-                    visitType === "physical"
-                      ? "border-brand-forest bg-brand-forest/10 text-brand-forest"
-                      : "border-slate-200 text-slate-600 hover:bg-slate-50"
-                  }`}
-                >
-                  <MapPin className="w-4 h-4 text-brand-forest" />
-                  <span>Physical Site Visit</span>
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setVisitType("virtual")}
-                  className={`min-h-[44px] p-2.5 rounded-lg border text-xs font-bold flex items-center justify-center gap-2 ${
-                    visitType === "virtual"
-                      ? "border-brand-forest bg-brand-forest/10 text-brand-forest"
-                      : "border-slate-200 text-slate-600 hover:bg-slate-50"
-                  }`}
-                >
-                  <Calendar className="w-4 h-4 text-brand-forest" />
-                  <span>Virtual Video Tour</span>
-                </button>
               </div>
 
               {/* Full Name */}
@@ -179,7 +150,7 @@ export function InspectionModal({ isOpen, onClose, preselectedEstateId }: Inspec
             </div>
             <h3 className="text-2xl font-extrabold text-slate-900">Inspection Scheduled!</h3>
             <p className="text-sm text-slate-600 leading-relaxed">
-              Thank you, <strong className="text-slate-900">{fullName}</strong>. Our land allocation officer will contact you at <strong className="text-slate-900">{phone}</strong> to confirm transport and meeting details for <strong className="text-brand-forest">{selectedEstate.name}</strong>.
+              Thank you, <strong className="text-slate-900">{fullName}</strong>. Our land allocation officer will contact you at <strong className="text-slate-900">{phone}</strong> to confirm your appointment and meeting details for <strong className="text-brand-forest">{selectedEstate.name}</strong>.
             </p>
             <div className="pt-2 flex flex-col gap-2">
               <a
