@@ -206,7 +206,7 @@ export default function PropertiesPage() {
                       href={`/properties/${estate.slug}`}
                       className="min-h-[42px] px-3 py-2 rounded-xl border border-slate-300 text-slate-900 font-bold text-xs hover:border-brand-forest hover:text-brand-forest transition-colors flex items-center justify-center gap-1 focus-visible:ring-2 focus-visible:ring-brand-forest focus-visible:outline-none"
                     >
-                      <span>Breakdown</span>
+                      <span>See More</span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
 
