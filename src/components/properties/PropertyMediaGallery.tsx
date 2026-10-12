@@ -28,6 +28,12 @@ const photoCaptions: Record<string, string> = {
   "solar-city-450sqm-fully-detached-pool.jpg": "Private Swimming Pool Courtyard & Sun Deck",
   "solar-city-450sqm-fully-detached-night.jpg": "Twilight Architectural Illumination & Façade",
   "solar-city-450sqm-fully-detached-carport.jpg": "Executive Carport & Garden Forecourt",
+  "solar-city-450sqm-fully-detached-side.jpg": "Corner Elevation & Perimeter Boundary Wall",
+  "solar-city-600sqm-fully-detached-front.jpg": "Front Elevation, Covered Carport & Upper Balcony",
+  "solar-city-600sqm-fully-detached-perspective.jpg": "Estate Boulevard Perspective & EV Station",
+  "solar-city-600sqm-fully-detached-aerial.jpg": "Rooftop Solar Array & Private Pool Courtyard",
+  "solar-city-600sqm-fully-detached-entrance.jpg": "Illuminated Entrance Steps & Garden Forecourt",
+  "solar-city-600sqm-fully-detached-street.jpg": "Twilight Streetscape & Architectural Fins",
 };
 
 function getCaption(imagePath: string, index: number): string {

@@ -139,7 +139,14 @@ export const featuredEstates: EstateListing[] = [
         titleDocument: "FCDA C of O",
         status: "Selling",
         startingPrice: 31800000,
-        image: "/images/solar-city-apo.jpg",
+        image: "/images/properties/solar-city-600sqm-fully-detached-front.jpg",
+        gallery: [
+            "/images/properties/solar-city-600sqm-fully-detached-front.jpg",
+            "/images/properties/solar-city-600sqm-fully-detached-perspective.jpg",
+            "/images/properties/solar-city-600sqm-fully-detached-aerial.jpg",
+            "/images/properties/solar-city-600sqm-fully-detached-entrance.jpg",
+            "/images/properties/solar-city-600sqm-fully-detached-street.jpg",
+        ],
         description:
             "Ultra-luxury 6-bedroom fully detached duplex plot featuring an expansive 600 SqM footprint inside Solar City Apo. Designed for high-net-worth homeowners seeking privacy, generous grounds for swimming pool and landscaped gardens, penthouse lounge, and attached domestic quarters (BQ).",
         infrastructureProgress: 85,
@@ -180,8 +187,8 @@ export const featuredEstates: EstateListing[] = [
             "/images/properties/solar-city-450sqm-fully-detached-front.jpg",
             "/images/properties/solar-city-450sqm-fully-detached-street.jpg",
             "/images/properties/solar-city-450sqm-fully-detached-pool.jpg",
-            "/images/properties/solar-city-450sqm-fully-detached-night.jpg",
             "/images/properties/solar-city-450sqm-fully-detached-carport.jpg",
+            "/images/properties/solar-city-450sqm-fully-detached-side.jpg",
         ],
         description:
             "Executive 5-bedroom detached duplex plot tailored for family living and long-term prestige. Positioned along prime internal boulevards of Solar City Apo with immediate layout demarcation, verified FCDA title, and seamless connection to the Apo-Gudu transit corridor.",
