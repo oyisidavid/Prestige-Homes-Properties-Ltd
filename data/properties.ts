@@ -31,7 +31,7 @@ export const contactDetails = {
     phone: "+234 809 696 0065",
     whatsapp: "2348096960065",
     address: "FF6A, 4th Floor, Ocean Centre, Plot 1018, Cadastral Zone B18, Off Oladipo Diya Road, Apo, Gudu, Abuja",
-    email: "info@prestigehomes.ng",
+    email: "info@prestigehomeslimited.com",
     tagline: "...crafting quality, Delivering value",
     openingHours: "Mon - Sat: 8:00 AM - 6:00 PM",
 };

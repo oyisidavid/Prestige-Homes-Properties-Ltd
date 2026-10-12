@@ -1,6 +1,7 @@
 import React from "react";
 import { Hero } from "@/components/home/Hero";
 import { TrustRibbon } from "@/components/home/TrustRibbon";
+import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { FeaturedEstates } from "@/components/home/FeaturedEstates";
 import { BannerSection } from "@/components/home/BannerSection";
 import { InspectionCTA } from "@/components/home/InspectionCTA";
@@ -15,7 +16,10 @@ export default function HomePage() {
       {/* 2. Proof & Metrics Ribbon */}
       <TrustRibbon />
 
-      {/* 3. Featured Estates Showcase (Solar City Apo & The Embassy) */}
+      {/* 3. Why Choose Us Section */}
+      <WhyChooseUs />
+
+      {/* 4. Featured Estates Showcase */}
       <FeaturedEstates />
 
       {/* 4. Official Estate Banner Highlight Section */}

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Phone, Menu, X, ShieldCheck, MapPin } from "lucide-react";
+import { Phone, Menu, X, ShieldCheck, MapPin, Mail } from "lucide-react";
 import { contactDetails } from "@/data/properties";
 
 export function Navbar() {
@@ -41,6 +41,13 @@ export function Navbar() {
               className="hover:text-white transition-colors hidden md:flex items-center gap-1 font-bold text-emerald-200"
             >
               <Phone className="w-3 h-3 text-brand-gold" /> {contactDetails.phone}
+            </a>
+            <span className="hidden lg:inline text-emerald-700">|</span>
+            <a
+              href={`mailto:${contactDetails.email}`}
+              className="hover:text-white transition-colors hidden lg:flex items-center gap-1 font-bold text-emerald-200"
+            >
+              <Mail className="w-3 h-3 text-brand-gold" /> {contactDetails.email}
             </a>
           </div>
         </div>

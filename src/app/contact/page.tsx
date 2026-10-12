@@ -41,33 +41,35 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Office Details Card */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-md border border-surface-border space-y-6">
-              <h3 className="text-xl font-extrabold text-slate-900 border-b border-slate-100 pb-4">
+            <div className="bg-brand-forest text-white p-6 sm:p-8 rounded-3xl shadow-xl border border-brand-forest-dark/40 relative overflow-hidden space-y-6">
+              <div className="absolute -top-12 -right-12 w-44 h-44 bg-white/5 rounded-full blur-2xl pointer-events-none" />
+
+              <h3 className="text-xl font-extrabold text-white border-b border-white/15 pb-4">
                 Head Office & Contact Details
               </h3>
 
-              <div className="space-y-5 text-sm text-slate-700">
+              <div className="space-y-5 text-sm">
                 <div className="flex items-start gap-3.5">
-                  <div className="w-10 h-10 rounded-xl bg-brand-forest/10 flex items-center justify-center text-brand-forest shrink-0 mt-0.5">
-                    <MapPin className="w-5 h-5 text-brand-forest" />
+                  <div className="w-10 h-10 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center text-amber-300 shrink-0 mt-0.5">
+                    <MapPin className="w-5 h-5 text-amber-300" />
                   </div>
                   <div>
-                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Office Address</span>
-                    <span className="font-extrabold text-slate-900 leading-relaxed block mt-0.5">
+                    <span className="text-xs font-bold text-emerald-200 uppercase tracking-wider block">Office Address</span>
+                    <span className="font-extrabold text-white leading-relaxed block mt-0.5">
                       {contactDetails.address}
                     </span>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3.5">
-                  <div className="w-10 h-10 rounded-xl bg-brand-gold/15 flex items-center justify-center text-brand-gold shrink-0 mt-0.5">
-                    <Phone className="w-5 h-5 text-brand-gold" />
+                  <div className="w-10 h-10 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center text-amber-300 shrink-0 mt-0.5">
+                    <Phone className="w-5 h-5 text-amber-300" />
                   </div>
                   <div>
-                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Direct Telephone</span>
+                    <span className="text-xs font-bold text-emerald-200 uppercase tracking-wider block">Direct Telephone</span>
                     <a
                       href={`tel:${contactDetails.phone.replace(/\s+/g, "")}`}
-                      className="font-extrabold text-brand-forest hover:underline text-base block mt-0.5"
+                      className="font-black text-amber-300 hover:text-white transition-colors text-base block mt-0.5"
                     >
                       {contactDetails.phone}
                     </a>
@@ -75,36 +77,41 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-3.5">
-                  <div className="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 shrink-0 mt-0.5">
-                    <Mail className="w-5 h-5 text-emerald-700" />
+                  <div className="w-10 h-10 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center text-amber-300 shrink-0 mt-0.5">
+                    <Mail className="w-5 h-5 text-amber-300" />
                   </div>
                   <div>
-                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Email Address</span>
-                    <span className="font-extrabold text-slate-900 block mt-0.5">{contactDetails.email}</span>
+                    <span className="text-xs font-bold text-emerald-200 uppercase tracking-wider block">Email Address</span>
+                    <a
+                      href={`mailto:${contactDetails.email}`}
+                      className="font-extrabold text-white hover:text-amber-200 transition-colors block mt-0.5 break-all"
+                    >
+                      {contactDetails.email}
+                    </a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3.5">
-                  <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700 shrink-0 mt-0.5">
-                    <Clock className="w-5 h-5 text-slate-700" />
+                  <div className="w-10 h-10 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center text-amber-300 shrink-0 mt-0.5">
+                    <Clock className="w-5 h-5 text-amber-300" />
                   </div>
                   <div>
-                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Operational Hours</span>
-                    <span className="font-bold text-slate-800 block mt-0.5">{contactDetails.openingHours}</span>
+                    <span className="text-xs font-bold text-emerald-200 uppercase tracking-wider block">Operational Hours</span>
+                    <span className="font-bold text-emerald-100 block mt-0.5">{contactDetails.openingHours}</span>
                   </div>
                 </div>
               </div>
 
-              <div className="pt-2 border-t border-slate-100">
+              <div className="pt-2 border-t border-white/15">
                 <a
                   href={`https://wa.me/${contactDetails.whatsapp}?text=${encodeURIComponent(
                     "Hello Prestige Homes, I want to inquire about site inspection and plot allocations."
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="min-h-[48px] w-full bg-brand-forest hover:bg-brand-forest-dark text-white font-extrabold text-sm rounded-xl shadow-md transition-colors flex items-center justify-center gap-2 focus-visible:ring-2 focus-visible:ring-brand-forest focus-visible:outline-none"
+                  className="min-h-[48px] w-full bg-white hover:bg-emerald-50 text-brand-forest-dark font-black text-sm rounded-xl shadow-lg transition-all flex items-center justify-center gap-2.5 focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none"
                 >
-                  <MessageSquare className="w-4 h-4 text-brand-gold shrink-0" />
+                  <MessageSquare className="w-4 h-4 text-brand-forest shrink-0" />
                   <span>Instant WhatsApp Consultation</span>
                 </a>
               </div>
