@@ -4,16 +4,12 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Phone, MessageSquare, Menu, X, ShieldCheck, MapPin } from "lucide-react";
+import { Phone, Menu, X, ShieldCheck, MapPin } from "lucide-react";
 import { contactDetails } from "@/data/properties";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-
-  const whatsappUrl = `https://wa.me/${contactDetails.whatsapp}?text=${encodeURIComponent(
-    "Hello Prestige Homes, I am interested in verified FCDA land banking and property allocation in Abuja."
-  )}`;
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -24,8 +20,8 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-surface-border bg-white/98 backdrop-blur-md transition-all shadow-md">
-      {/* Top Banner - FCDA Compliance & Headquarters */}
-      <div className="bg-brand-forest-dark text-white px-4 py-1.5 text-xs font-medium">
+      {/* Top Banner - FCDA Compliance & Headquarters (Hidden on mobile and tablet) */}
+      <div className="hidden lg:block bg-brand-forest-dark text-white px-4 py-1.5 text-xs font-medium">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1 sm:gap-4">
           <div className="flex items-center gap-2">
             <span className="inline-flex items-center gap-1 bg-brand-gold text-white px-2 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wide">
@@ -50,64 +46,65 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Main Navbar - Large Clear Transparent Logo */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 sm:h-28 flex items-center justify-between">
-        {/* Transparent Logo Link to Home */}
+      {/* Main Navbar - Logo with Company Name */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 lg:h-24 flex items-center justify-between gap-3 sm:gap-4">
+        {/* Logo and Company Name Branding Link */}
         <Link
           href="/"
-          className="flex items-center group focus-visible:ring-2 focus-visible:ring-brand-forest focus-visible:outline-none rounded-xl p-1 transition-transform hover:scale-[1.02]"
+          className="flex items-center gap-2 sm:gap-3 group focus-visible:ring-2 focus-visible:ring-brand-forest focus-visible:outline-none rounded-xl p-1 transition-transform hover:scale-[1.01]"
           aria-label="Prestige Homes & Properties Ltd Homepage"
         >
-          <div className="relative h-16 sm:h-20 md:h-22 w-auto min-w-[180px] sm:min-w-[240px] flex items-center">
+          <div className="relative h-10 sm:h-12 md:h-14 lg:h-16 w-auto aspect-[625/460] shrink-0 flex items-center">
             <Image
-              src="/images/logowithwhitebackground.png"
-              alt="Prestige Homes & Properties Ltd Transparent Logo"
-              width={340}
-              height={95}
-              className="h-16 sm:h-20 md:h-22 w-auto object-contain drop-shadow-sm"
+              src="/images/logo-emblem.png"
+              alt="Prestige Homes & Properties Ltd"
+              width={130}
+              height={96}
+              className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain drop-shadow-sm"
               priority
             />
           </div>
+          <div className="flex flex-col justify-center">
+            <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-1.5 leading-none">
+              <span className="text-sm sm:text-base md:text-lg lg:text-xl font-black text-brand-forest tracking-tight uppercase">
+                Prestige Homes
+              </span>
+              <span className="text-[10px] sm:text-xs md:text-sm lg:text-base font-black text-slate-800 tracking-wider uppercase mt-0.5 sm:mt-0">
+                & Properties Ltd
+              </span>
+            </div>
+            <span className="text-[10px] sm:text-[11px] font-serif italic text-brand-gold font-bold leading-tight mt-1 hidden md:block">
+              ...crafting quality, Delivering value
+            </span>
+          </div>
         </Link>
 
-        {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-8 text-base font-extrabold text-text-secondary">
-          {navLinks.map((link) => {
-            const isActive = pathname === link.href;
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`py-2 border-b-2 transition-all min-h-[44px] flex items-center ${
-                  isActive
-                    ? "border-brand-forest text-brand-forest font-black"
-                    : "border-transparent hover:border-brand-forest/60 hover:text-brand-forest"
-                } focus-visible:ring-2 focus-visible:ring-brand-forest focus-visible:outline-none rounded-md`}
-              >
-                {link.name}
-              </Link>
-            );
-          })}
-        </nav>
-
-        {/* Action Buttons (Desktop) */}
-        <div className="hidden lg:flex items-center gap-3">
-          <a
-            href={`tel:${contactDetails.phone.replace(/\s+/g, "")}`}
-            className="min-h-[48px] px-5 py-3 rounded-xl border-2 border-surface-border text-text-primary font-extrabold text-sm hover:border-brand-forest hover:text-brand-forest transition-colors flex items-center gap-2 focus-visible:ring-2 focus-visible:ring-brand-forest focus-visible:outline-none"
+        {/* Desktop Navigation Links & Action */}
+        <div className="hidden lg:flex items-center gap-8">
+          <nav className="flex items-center gap-8 text-base font-extrabold text-text-secondary">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`py-2 border-b-2 transition-all min-h-[44px] flex items-center ${
+                    isActive
+                      ? "border-brand-forest text-brand-forest font-black"
+                      : "border-transparent hover:border-brand-forest/60 hover:text-brand-forest"
+                  } focus-visible:ring-2 focus-visible:ring-brand-forest focus-visible:outline-none rounded-md`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
+          </nav>
+          <Link
+            href="/contact"
+            className="min-h-[46px] px-6 py-2.5 rounded-xl bg-brand-forest hover:bg-brand-forest-dark text-white font-extrabold text-sm shadow-md transition-all flex items-center gap-2 focus-visible:ring-2 focus-visible:ring-brand-forest focus-visible:outline-none"
           >
-            <Phone className="w-4.5 h-4.5 text-brand-forest" />
-            <span>Call Advisory</span>
-          </a>
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="min-h-[48px] px-6 py-3 rounded-xl bg-brand-forest hover:bg-brand-forest-dark text-white font-black text-sm shadow-lg shadow-emerald-900/15 transition-all flex items-center gap-2 focus-visible:ring-2 focus-visible:ring-brand-forest focus-visible:outline-none"
-          >
-            <MessageSquare className="w-4.5 h-4.5 text-brand-gold" />
-            <span>WhatsApp Inquiry</span>
-          </a>
+            <span>Schedule Inspection</span>
+          </Link>
         </div>
 
         {/* Mobile Hamburger Toggle Button */}
@@ -144,22 +141,13 @@ export function Navbar() {
             })}
           </nav>
           <div className="pt-3 border-t border-surface-border flex flex-col gap-3">
-            <a
-              href={`tel:${contactDetails.phone.replace(/\s+/g, "")}`}
-              className="min-h-[48px] w-full py-3 rounded-xl border-2 border-brand-forest text-brand-forest font-black text-center flex items-center justify-center gap-2 text-sm"
+            <Link
+              href="/contact"
+              onClick={() => setMobileMenuOpen(false)}
+              className="min-h-[48px] w-full py-3 rounded-xl bg-brand-forest hover:bg-brand-forest-dark text-white font-black text-center flex items-center justify-center gap-2 shadow-md text-sm"
             >
-              <Phone className="w-4 h-4 text-brand-forest" />
-              <span>Call Advisory ({contactDetails.phone})</span>
-            </a>
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="min-h-[48px] w-full py-3 rounded-xl bg-brand-forest text-white font-black text-center flex items-center justify-center gap-2 shadow-md text-sm"
-            >
-              <MessageSquare className="w-4 h-4 text-brand-gold" />
-              <span>WhatsApp Consultation</span>
-            </a>
+              <span>Schedule Site Inspection</span>
+            </Link>
           </div>
         </div>
       )}

@@ -45,7 +45,7 @@ export function InspectionCTA() {
             </h2>
 
             <p className="text-sm sm:text-base text-emerald-100 leading-relaxed">
-              Book a guided site tour with our experienced land allocation officers. We provide physical transport or live video walk-throughs for diaspora buyers.
+              Book a guided site tour with our experienced land allocation officers.
             </p>
 
             <div className="space-y-4 pt-2">
@@ -62,14 +62,6 @@ export function InspectionCTA() {
                 <div>
                   <h4 className="text-sm font-bold text-white">Physical Plot Beaconing</h4>
                   <p className="text-xs text-emerald-200">Inspect plot dimensions (150 SqM to 1,000 SqM) and road network beacons.</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3 p-3.5 rounded-xl bg-white/5 border border-white/10">
-                <CheckCircle2 className="w-5 h-5 text-brand-gold shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="text-sm font-bold text-white">Complimentary Shuttle</h4>
-                  <p className="text-xs text-emerald-200">Pickup available from Ocean Centre, Apo, Gudu, Abuja.</p>
                 </div>
               </div>
             </div>

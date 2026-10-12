@@ -4,6 +4,7 @@ import { TrustRibbon } from "@/components/home/TrustRibbon";
 import { FeaturedEstates } from "@/components/home/FeaturedEstates";
 import { BannerSection } from "@/components/home/BannerSection";
 import { InspectionCTA } from "@/components/home/InspectionCTA";
+import { FloatingWhatsApp } from "@/components/home/FloatingWhatsApp";
 
 export default function HomePage() {
   return (
@@ -22,6 +23,9 @@ export default function HomePage() {
 
       {/* 5. Site Inspection Booking Section */}
       <InspectionCTA />
+
+      {/* 6. Floating WhatsApp Instant Advisory on Home Page */}
+      <FloatingWhatsApp />
     </div>
   );
 }
