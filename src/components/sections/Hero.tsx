@@ -69,14 +69,6 @@ export function Hero() {
                 <span>Explore Featured Estates</span>
                 <ArrowRight className="w-5 h-5 text-brand-gold" />
               </a>
-              <a
-                href={whatsappHeroUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto min-h-[48px] px-6 py-3.5 rounded-xl border-2 border-brand-gold/80 bg-white hover:bg-brand-gold-light text-brand-gold-dark font-bold text-base transition-colors flex items-center justify-center gap-2 focus-visible:ring-2 focus-visible:ring-brand-forest"
-              >
-                <span>WhatsApp Land Advisory</span>
-              </a>
             </div>
           </div>
 

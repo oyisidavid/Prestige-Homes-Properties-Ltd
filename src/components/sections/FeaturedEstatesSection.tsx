@@ -44,13 +44,13 @@ export function FeaturedEstatesSection() {
           <div className="space-y-3 max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-forest/10 border border-brand-forest/20 text-brand-forest text-xs font-bold uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5 text-brand-gold" />
-              <span>Institutional Land Banking & Estates</span>
+              <span>Premium Land and Properties Across Nigeria's Most Exclusive Locations</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-text-primary tracking-tight">
               Featured <span className="text-brand-forest">Abuja Developments</span>
             </h2>
             <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
-              Explore verified FCDA title listings in prime growth corridors. Immediate plot allocation with options ranging from residential duplexes to commercial parcels.
+              Explore verified FCDA title listings in prime locations. Immediate plot allocation with options ranging from residential duplexes to commercial parcels.
             </p>
           </div>
 
