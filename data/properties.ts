@@ -35,7 +35,46 @@ export const contactDetails = {
 };
 
 export const featuredEstates: EstateListing[] = [
-    // 1. Peace Crest Estate (Sherretti, Kabusa–Abuja) — ₦7,000,000
+    // 1. The Embassy 150 SqM 3-Bed Terrace Duplex — ₦6,000,000
+    {
+        id: "embassy-150sqm-3bed-terrace",
+        slug: "embassy-150sqm-3bed-terrace",
+        name: "The Embassy 150 SqM 3-Bed Terrace Duplex",
+        tagline: "Modern Solar-Equipped Smart Terrace",
+        district: "Wasa District Corridor",
+        city: "Abuja",
+        titleDocument: "FCDA C of O",
+        status: "Pre-Sales",
+        startingPrice: 6000000,
+        image: "/images/properties/embassy-150sqm-terrace-aerial.jpg",
+        gallery: [
+            "/images/properties/embassy-150sqm-terrace-aerial.jpg",
+            "/images/properties/embassy-150sqm-terrace-overhead.jpg",
+            "/images/properties/embassy-150sqm-terrace-front.jpg",
+            "/images/theembassy.jpg",
+        ],
+        description:
+            "Modern 3-bedroom terrace duplex plot within The Embassy, Wasa District, Abuja. Engineered with contemporary architectural lines, dedicated rooftop solar integration, covered parking forecourts, and landscaped walkways. Offers exceptional capital growth and verifiable FCDA Certificate of Occupancy documentation.",
+        infrastructureProgress: 60,
+        category: "typology",
+        options: [
+            {
+                sizeSqM: 150,
+                priceNaira: 6000000,
+                typology: "3-Bed Terrace Duplex Plot",
+            },
+        ],
+        amenities: [
+            "3 Ensuite Bedrooms & Private Balcony",
+            "Rooftop Solar Array Pre-Installation",
+            "Dedicated Covered Carport Forecourt",
+            "FCDA C of O Guaranteed Title Documentation",
+            "Gated Community Security & CCTV",
+            "Paved Internal Boulevards & Drainage",
+        ],
+    },
+
+    // 2. Peace Crest Estate (Sherretti, Kabusa–Abuja) — ₦7,000,000
     {
         id: "peace-crest-estate",
         slug: "peace-crest-estate",
@@ -80,7 +119,7 @@ export const featuredEstates: EstateListing[] = [
         ],
     },
 
-    // 2. The Embassy Wasa (Master Development) — ₦7,500,000
+    // 3. The Embassy Wasa (Master Development) — ₦7,500,000
     {
         id: "the-embassy-wasa",
         slug: "the-embassy-wasa",
@@ -121,7 +160,7 @@ export const featuredEstates: EstateListing[] = [
         ],
     },
 
-    // 3. Solar City 170 SqM Terrace 1 — ₦9,000,000
+    // 4. Solar City 170 SqM Terrace 1 — ₦9,000,000
     {
         id: "solarcity-170sqm-terrace-1",
         slug: "solarcity-170sqm-terrace-1",
@@ -157,6 +196,43 @@ export const featuredEstates: EstateListing[] = [
             "Solar Grid & Street Lighting",
             "Security Gatehouse & Patrols",
             "Central Drainage & Reticulation",
+        ],
+    },
+
+    // 5. The Embassy 250 SqM 4-Bed Semi-Detached Duplex — ₦10,000,000
+    {
+        id: "embassy-250sqm-4bed-semi-detached",
+        slug: "embassy-250sqm-4bed-semi-detached",
+        name: "The Embassy 250 SqM 4-Bed Semi-Detached Duplex",
+        tagline: "Contemporary Semi-Detached Executive Villa",
+        district: "Wasa District Corridor",
+        city: "Abuja",
+        titleDocument: "FCDA C of O",
+        status: "Pre-Sales",
+        startingPrice: 10000000,
+        image: "/images/properties/embassy-250sqm-semi-detached-front.jpg",
+        gallery: [
+            "/images/properties/embassy-250sqm-semi-detached-front.jpg",
+            "/images/theembassy.jpg",
+        ],
+        description:
+            "Executive 4-bedroom semi-detached duplex plot situated in The Embassy, Wasa District. Features striking geometric architecture, dual covered carports, expansive glass apertures, private garden compound, and verified FCDA C of O land title documentation.",
+        infrastructureProgress: 60,
+        category: "typology",
+        options: [
+            {
+                sizeSqM: 250,
+                priceNaira: 10000000,
+                typology: "4-Bed Semi-Detached Duplex Plot",
+            },
+        ],
+        amenities: [
+            "4 Ensuite Bedrooms & Upper Floor Terrace",
+            "Double Covered Vehicle Carport",
+            "Private Compound Grounds & Green Lawn",
+            "FCDA C of O Guaranteed Ownership",
+            "Smart Estate Power & Infrastructure",
+            "24/7 Gatehouse Access Control",
         ],
     },
 
@@ -364,16 +440,16 @@ export function getEstateBySlug(slug: string): EstateListing | undefined {
     return featuredEstates.find((e) => e.slug === slug || e.id === slug);
 }
 
-// Exactly 6 curated home page previews ordered cheapest to highest across Sherretti/Kabusa, Wasa, and Apo corridors
+// Exactly 6 curated home page previews ordered cheapest to highest across Wasa, Sherretti/Kabusa, and Apo corridors
 export const homeFeaturedEstates: EstateListing[] = [
-    // 1. Sherretti, Kabusa–Abuja (Flagship Estate) — ₦7M
+    // 1. Wasa District Corridor (The Embassy Smart Terrace) — ₦6M
+    featuredEstates.find((e) => e.id === "embassy-150sqm-3bed-terrace")!,
+    // 2. Sherretti, Kabusa–Abuja (Flagship Estate) — ₦7M
     featuredEstates.find((e) => e.id === "peace-crest-estate")!,
-    // 2. Wasa District Corridor (Flagship Masterplan) — ₦7.5M
-    featuredEstates.find((e) => e.id === "the-embassy-wasa")!,
     // 3. Burum West District, Apo (Accessible Smart Terrace) — ₦9M
     featuredEstates.find((e) => e.id === "solarcity-170sqm-terrace-1")!,
-    // 4. Burum West District, Apo (Semi-Detached Duplex) — ₦13.4M
-    featuredEstates.find((e) => e.id === "250sqm-semi-detached-duplex")!,
+    // 4. Wasa District Corridor (The Embassy Semi-Detached Duplex) — ₦10M
+    featuredEstates.find((e) => e.id === "embassy-250sqm-4bed-semi-detached")!,
     // 5. Burum West District, Apo (Luxury Mansion Typology) — ₦31.8M
     featuredEstates.find((e) => e.id === "600sqm-6bed-fully-detached-duplex")!,
     // 6. Burum West District, Apo (High-Density Multi-Family Typology) — ₦54M
