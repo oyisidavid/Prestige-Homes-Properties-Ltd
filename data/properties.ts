@@ -91,7 +91,12 @@ export const featuredEstates: EstateListing[] = [
         titleDocument: "FCDA C of O",
         status: "Pre-Sales",
         startingPrice: 7500000,
-        image: "/images/the-embassy-wasa.jpg",
+        image: "/images/properties/the-embassy-wasa-masterplan.jpg",
+        gallery: [
+            "/images/properties/the-embassy-wasa-masterplan.jpg",
+            "/images/properties/the-embassy-wasa-aerial.jpg",
+            "/images/theembassy.jpg",
+        ],
         description:
             "The Embassy in Wasa District is designed as an exclusive smart estate community nestled along the expanding Wasa-Apo expressway. Designed for high capital appreciation and institutional land banking, offering multi-family terrace duplexes, detached duplexes, and apartment block land subdivisions.",
         infrastructureProgress: 60,
