@@ -39,6 +39,7 @@ const photoCaptions: Record<string, string> = {
   "solar-city-1000sqm-block-flats-front.jpg": "Full Front Elevation — 3-Storey Block with EV Charging",
   "solar-city-1000sqm-block-flats-aerial.jpg": "Rooftop Solar Array & Overhead Site Layout",
   "solar-city-1000sqm-block-flats-solar-carport.jpg": "Solar Carport, EV Station & Podium Car Park",
+  "the-embassy-wasa.jpg": "The Embassy Masterplan — Gated Entrance & Luxury Villa Community",
 };
 
 function getCaption(imagePath: string, index: number): string {
