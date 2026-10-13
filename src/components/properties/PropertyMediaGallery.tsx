@@ -42,6 +42,8 @@ const photoCaptions: Record<string, string> = {
   "embassy-150sqm-terrace-overhead.jpg": "Overhead Rooftop Solar Array & Front Forecourt",
   "embassy-150sqm-terrace-front.jpg": "Ground Street Elevation & Covered Carport Entries",
   "embassy-250sqm-semi-detached-front.jpg": "Front Façade, Executive Carport & Modern Architecture",
+  "embassy-350sqm-detached-front.jpg": "Front Façade, Angled Pergola & Private Compound Gatehouse",
+  "embassy-1000sqm-block-of-flats.jpg": "3-Storey Residential Elevation with Solar Carports & Landscaping",
   "the-embassy-wasa.jpg": "The Embassy Masterplan — Gated Entrance & Luxury Villa Community",
   "the-embassy-wasa-masterplan.jpg": "The Embassy Masterplan — Gated Security Entrance & Luxury Villas",
   "the-embassy-wasa-aerial.jpg": "The Embassy Aerial Overview — Green Corridor & Planned Subdivisions",

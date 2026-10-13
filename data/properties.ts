@@ -236,7 +236,7 @@ export const featuredEstates: EstateListing[] = [
         ],
     },
 
-    // 4. 250 SqM Semi-Detached Duplex — ₦13,400,000
+    // 6. 250 SqM Semi-Detached Duplex (Solar City) — ₦13,400,000
     {
         id: "250sqm-semi-detached-duplex",
         slug: "250sqm-semi-detached-duplex",
@@ -275,7 +275,44 @@ export const featuredEstates: EstateListing[] = [
         ],
     },
 
-    // 5. 350 SqM 4-Bed Fully Detached Duplex — ₦19,000,000
+    // 7. The Embassy 350 SqM 4-Bed Fully Detached Duplex — ₦14,000,000
+    {
+        id: "embassy-350sqm-4bed-fully-detached",
+        slug: "embassy-350sqm-4bed-fully-detached",
+        name: "The Embassy 350 SqM 4-Bed Fully Detached Duplex",
+        tagline: "Contemporary Architectural Detached Villa",
+        district: "Wasa District Corridor",
+        city: "Abuja",
+        titleDocument: "FCDA C of O",
+        status: "Pre-Sales",
+        startingPrice: 14000000,
+        image: "/images/properties/embassy-350sqm-detached-front.jpg",
+        gallery: [
+            "/images/properties/embassy-350sqm-detached-front.jpg",
+            "/images/theembassy.jpg",
+        ],
+        description:
+            "Ultra-modern 4-bedroom fully detached duplex plot in The Embassy, Wasa District. Features sharp angular pergolas, expansive floor-to-ceiling glazing, private compound gatehouse access, dedicated multi-vehicle parking, and verified FCDA C of O title documentation.",
+        infrastructureProgress: 60,
+        category: "typology",
+        options: [
+            {
+                sizeSqM: 350,
+                priceNaira: 14000000,
+                typology: "4-Bed Fully Detached Duplex Plot",
+            },
+        ],
+        amenities: [
+            "4 Ensuite Bedrooms & Upper Floor Balcony",
+            "Contemporary Architectural Pergola & Facade",
+            "Private Compound Gatehouse & Parking for 4 Cars",
+            "FCDA C of O Guaranteed Title Documentation",
+            "Solar Energy Integration & Paved Internal Roads",
+            "24/7 Gated Security & Perimeter Surveillance",
+        ],
+    },
+
+    // 8. 350 SqM 4-Bed Fully Detached Duplex (Solar City) — ₦19,000,000
     {
         id: "350sqm-4bed-fully-detached",
         slug: "350sqm-4bed-fully-detached",
@@ -315,7 +352,7 @@ export const featuredEstates: EstateListing[] = [
         ],
     },
 
-    // 6. 450 SqM 5-Bed Fully Detached Duplex — ₦24,000,000
+    // 9. 450 SqM 5-Bed Fully Detached Duplex (Solar City) — ₦24,000,000
     {
         id: "450sqm-5bed-fully-detached",
         slug: "450sqm-5bed-fully-detached",
@@ -355,7 +392,7 @@ export const featuredEstates: EstateListing[] = [
         ],
     },
 
-    // 7. 600 SqM 6-Bed Fully Detached Duplex — ₦31,800,000
+    // 10. 600 SqM 6-Bed Fully Detached Duplex (Solar City) — ₦31,800,000
     {
         id: "600sqm-6bed-fully-detached-duplex",
         slug: "600sqm-6bed-fully-detached-duplex",
@@ -395,7 +432,44 @@ export const featuredEstates: EstateListing[] = [
         ],
     },
 
-    // 8. 1000 SqM 12-Unit Block of Flats — ₦54,000,000
+    // 11. The Embassy 1,000 SqM 12-Unit Block of Flats (Residential) — ₦40,000,000
+    {
+        id: "embassy-1000sqm-12unit-block-of-flats",
+        slug: "embassy-1000sqm-12unit-block-of-flats",
+        name: "The Embassy 1,000 SqM 12-Unit Block of Flats (Residential)",
+        tagline: "High-Yield Multi-Family Residential Investment",
+        district: "Wasa District Corridor",
+        city: "Abuja",
+        titleDocument: "FCDA C of O",
+        status: "Pre-Sales",
+        startingPrice: 40000000,
+        image: "/images/properties/embassy-1000sqm-block-of-flats.jpg",
+        gallery: [
+            "/images/properties/embassy-1000sqm-block-of-flats.jpg",
+            "/images/theembassy.jpg",
+        ],
+        description:
+            "Prime 1,000 SqM multi-family residential plot in The Embassy, Wasa District, custom-designed for a high-density 12-unit luxury block of flats. Boasts modern glass balconies, solar canopy carports, verified FCDA Certificate of Occupancy, and exceptional rental yield potential in Abuja's high-growth corridor.",
+        infrastructureProgress: 60,
+        category: "typology",
+        options: [
+            {
+                sizeSqM: 1000,
+                priceNaira: 40000000,
+                typology: "12-Unit Block of Flats Plot (Residential)",
+            },
+        ],
+        amenities: [
+            "Approved Multi-Family 12-Unit Architectural Layout",
+            "Solar-Powered Covered Carports & EV Stations",
+            "Expansive 1,000 SqM Institutional Footprint",
+            "FCDA C of O Guaranteed Title Documentation",
+            "24/7 Gated Community Access Control & CCTV",
+            "Central Drainage, Water Reticulation & Paved Roads",
+        ],
+    },
+
+    // 12. 1000 SqM 12-Unit Block of Flats (Solar City) — ₦54,000,000
     {
         id: "1000sqm-12unit-blocks-of-flat",
         slug: "1000sqm-12unit-blocks-of-flat",
