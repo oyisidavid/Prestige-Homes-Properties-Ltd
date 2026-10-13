@@ -101,10 +101,7 @@ export function Hero() {
               <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-white/95 backdrop-blur-md border border-white/50 shadow-xl">
                 <div className="flex items-center justify-between">
                   <div>
-                    <span className="text-[10px] font-extrabold uppercase tracking-wider text-brand-gold bg-amber-50 px-2 py-0.5 rounded">
-                      Official Header Banner
-                    </span>
-                    <h3 className="text-lg font-extrabold text-slate-900 mt-0.5">FCT Estate Masterplan</h3>
+                    <h3 className="text-lg font-extrabold text-slate-900 mt-0.5">Verified FCDA C of O land titles</h3>
                     <p className="text-xs text-slate-600 font-bold">Sherretti Kabusa, Apo & Wasa</p>
                   </div>
                   <div className="text-right">
