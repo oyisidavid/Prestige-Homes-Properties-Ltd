@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { FloatingWhatsApp } from "@/components/home/FloatingWhatsApp";
+import { ScrollToTop } from "@/components/ui/ScrollToTop";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -36,10 +38,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="min-h-screen bg-surface-canvas text-text-primary antialiased flex flex-col">
+      <body className="min-h-screen bg-surface-canvas text-text-primary antialiased flex flex-col relative">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <FloatingWhatsApp />
+        <ScrollToTop />
       </body>
     </html>
   );
