@@ -31,6 +31,7 @@ export const contactDetails = {
     address: "FF6A, 4th Floor, Ocean Centre, Plot 1018, Cadastral Zone B18, Off Oladipo Diya Road, Apo, Gudu, Abuja",
     email: "info@prestigehomeslimited.com",
     webmail: "https://39.qservers.net:2096/webmaillogout.cgi",
+    website: process.env.NEXT_PUBLIC_SITE_URL || "https://prestigehomeslimited.com",
     tagline: "...crafting quality, Delivering value",
     openingHours: "Mon - Sat: 8:00 AM - 6:00 PM",
 };

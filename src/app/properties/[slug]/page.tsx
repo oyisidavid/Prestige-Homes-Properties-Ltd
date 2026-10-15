@@ -12,11 +12,57 @@ import {
   Building,
   Phone,
 } from "lucide-react";
+import type { Metadata } from "next";
 import { getEstateBySlug, contactDetails } from "@/data/properties";
 import { PropertyMediaGallery } from "@/components/properties/PropertyMediaGallery";
 
 interface PropertyDetailPageProps {
   params: Promise<{ slug: string }>;
+}
+
+export async function generateMetadata({ params }: PropertyDetailPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const estate = getEstateBySlug(slug);
+
+  if (!estate) {
+    return {
+      title: "Property Not Found | Prestige Homes & Properties Ltd",
+    };
+  }
+
+  const title = `${estate.name} | ${estate.district}, Abuja`;
+  const description = `${estate.name} in ${estate.district}, Abuja. Title: ${estate.titleDocument}. Starting from ₦${estate.startingPrice.toLocaleString()}. ${estate.description.slice(0, 150)}...`;
+  const propertyUrl = `${contactDetails.website}/properties/${estate.slug}`;
+  const imageUrl = estate.image.startsWith("http")
+    ? estate.image
+    : `${contactDetails.website}${estate.image}`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `/properties/${estate.slug}`,
+    },
+    openGraph: {
+      title: `${estate.name} — ${estate.district}, Abuja | Prestige Homes`,
+      description,
+      url: propertyUrl,
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 800,
+          alt: estate.name,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${estate.name} | ${estate.district}, Abuja`,
+      description,
+      images: [imageUrl],
+    },
+  };
 }
 
 export default async function PropertyDetailPage({ params }: PropertyDetailPageProps) {
@@ -39,8 +85,73 @@ export default async function PropertyDetailPage({ params }: PropertyDetailPageP
     `Hello Prestige Homes, I am interested in plot allocation and payment plans for ${estate.name} in ${estate.district}.`
   )}`;
 
+  const propertyJsonLd = {
+    "@context": "https://schema.org",
+    "@type": ["SingleFamilyResidence", "Product"],
+    name: estate.name,
+    description: estate.description,
+    image: estate.image.startsWith("http")
+      ? estate.image
+      : `${contactDetails.website}${estate.image}`,
+    url: `${contactDetails.website}/properties/${estate.slug}`,
+    offers: {
+      "@type": "Offer",
+      price: estate.startingPrice,
+      priceCurrency: "NGN",
+      availability:
+        estate.status === "Sold Out"
+          ? "https://schema.org/SoldOut"
+          : "https://schema.org/InStock",
+      seller: {
+        "@type": "RealEstateAgent",
+        name: contactDetails.company,
+        telephone: contactDetails.phone,
+        url: contactDetails.website,
+      },
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: estate.district,
+      addressRegion: "Federal Capital Territory (FCT)",
+      addressCountry: "NG",
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: contactDetails.website,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Properties",
+        item: `${contactDetails.website}/properties`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: estate.name,
+        item: `${contactDetails.website}/properties/${estate.slug}`,
+      },
+    ],
+  };
+
   return (
     <div className="py-10 bg-surface-canvas min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(propertyJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         {/* Navigation & Status Breadcrumb */}
         <div className="flex flex-wrap items-center justify-between gap-3">

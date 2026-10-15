@@ -1,8 +1,25 @@
 import React from "react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ShieldCheck, Building2, MapPin, Award, CheckCircle2, ArrowRight } from "lucide-react";
 import { contactDetails } from "@/data/properties";
+
+export const metadata: Metadata = {
+  title: "About Prestige Homes & Properties Ltd | Abuja Real Estate Developers",
+  description:
+    "Learn about Prestige Homes & Properties Ltd, our corporate vision, FCDA legal title compliance, and institutional land banking developments across Abuja, FCT Nigeria.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Prestige Homes & Properties Ltd — Abuja Real Estate Leaders",
+    description:
+      "Prestige Homes & Properties Ltd is a premier real estate development and land banking firm head-quartered in Apo, Abuja, Nigeria.",
+    url: `${contactDetails.website}/about`,
+    images: ["/images/banner.jpg"],
+  },
+};
 
 export default function AboutPage() {
   return (
