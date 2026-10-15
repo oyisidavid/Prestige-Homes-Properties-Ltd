@@ -30,6 +30,7 @@ export const contactDetails = {
     whatsapp: "2348096960065",
     address: "FF6A, 4th Floor, Ocean Centre, Plot 1018, Cadastral Zone B18, Off Oladipo Diya Road, Apo, Gudu, Abuja",
     email: "info@prestigehomeslimited.com",
+    webmail: "https://39.qservers.net:2096/webmaillogout.cgi",
     tagline: "...crafting quality, Delivering value",
     openingHours: "Mon - Sat: 8:00 AM - 6:00 PM",
 };
@@ -119,46 +120,6 @@ export const featuredEstates: EstateListing[] = [
         ],
     },
 
-    // 3. The Embassy Wasa (Master Development) — ₦7,500,000
-    {
-        id: "the-embassy-wasa",
-        slug: "the-embassy-wasa",
-        name: "The Embassy Wasa (Masterplan)",
-        tagline: "Pre-Sales High-Yield Opportunity",
-        district: "Wasa District Corridor",
-        city: "Abuja",
-        titleDocument: "FCDA C of O",
-        status: "Pre-Sales",
-        startingPrice: 7500000,
-        image: "/images/properties/the-embassy-wasa-masterplan.jpg",
-        gallery: [
-            "/images/properties/the-embassy-wasa-masterplan.jpg",
-            "/images/properties/the-embassy-wasa-aerial.jpg",
-            "/images/theembassy.jpg",
-        ],
-        description:
-            "The Embassy in Wasa District is designed as an exclusive smart estate community nestled along the expanding Wasa-Apo expressway. Designed for high capital appreciation and institutional land banking, offering multi-family terrace duplexes, detached duplexes, and apartment block land subdivisions.",
-        infrastructureProgress: 60,
-        category: "estate",
-        options: [
-            { sizeSqM: 150, priceNaira: 7500000, typology: "3 Bedroom Terrace Duplex" },
-            { sizeSqM: 250, priceNaira: 12500000, typology: "4 Bedroom Semi-Detached Duplex" },
-            { sizeSqM: 350, priceNaira: 17500000, typology: "4 Bedroom Fully Detached Duplex" },
-            { sizeSqM: 450, priceNaira: 22500000, typology: "5 Bedroom Fully Detached Duplex + BQ" },
-            { sizeSqM: 1000, priceNaira: 50000000, typology: "Block of Flats / Multi-Unit Sub-Division" },
-        ],
-        amenities: [
-            "Smart Home Automation Infrastructure",
-            "Gated Community Gatehouse & Access Control",
-            "24/7 Secured Environment & Surveillance",
-            "Paved Internal Road Network & Drainage",
-            "Dedicated Power Supply & Underground Utilities",
-            "Green Recreational Parks & Play Zones",
-            "Integrated Primary & Nursery School Site",
-            "Dedicated Commercial Mall & Supermarket Zone",
-            "On-site Healthcare Clinic Reserve",
-        ],
-    },
 
     // 4. Solar City 170 SqM Terrace 1 — ₦9,000,000
     {

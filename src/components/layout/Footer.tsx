@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, Lock } from "lucide-react";
 import { contactDetails } from "@/data/properties";
 
 export function Footer() {
@@ -113,6 +113,17 @@ export function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
           <p>© {new Date().getFullYear()} {contactDetails.company}. All rights reserved.</p>
           <div className="flex items-center gap-3 font-semibold">
+            <a
+              href={contactDetails.webmail}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-emerald-400 transition-colors inline-flex items-center gap-1 text-slate-400"
+              title="Admin & Owner Webmail Login (Roundcube)"
+            >
+              <Mail className="w-3.5 h-3.5 text-brand-gold" />
+              <span>Webmail</span>
+            </a>
+            <span>•</span>
             <span>FCDA Certified Titles</span>
             <span>•</span>
             <span>Federal Capital Territory (FCT) Abuja</span>

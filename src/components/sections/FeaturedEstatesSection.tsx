@@ -32,7 +32,7 @@ export function FeaturedEstatesSection() {
   const filteredEstates = featuredEstates.filter((estate) => {
     if (selectedDistrictFilter === "all") return true;
     if (selectedDistrictFilter === "apo") return estate.district.toLowerCase().includes("apo");
-    if (selectedDistrictFilter === "wasa") return estate.district.toLowerCase().includes("wasa") || estate.id === "the-embassy-wasa";
+    if (selectedDistrictFilter === "wasa") return estate.district.toLowerCase().includes("wasa");
     return true;
   });
 
