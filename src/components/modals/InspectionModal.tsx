@@ -29,7 +29,7 @@ export function InspectionModal({ isOpen, onClose, preselectedEstateId }: Inspec
   const selectedEstate = featuredEstates.find((e) => e.id === estateId) || featuredEstates[0];
 
   const whatsappConfirmUrl = `https://wa.me/${contactDetails.whatsapp}?text=${encodeURIComponent(
-    `Hello Prestige Homes, I just scheduled an on-site plot inspection for ${selectedEstate.name} (${selectedEstate.district}). Name: ${fullName}, Phone: ${phone}, Preferred Date: ${date}`
+    `Hello Femorade Prestige Properties, I just scheduled an on-site plot inspection for ${selectedEstate.name} (${selectedEstate.district}). Name: ${fullName}, Phone: ${phone}, Preferred Date: ${date}`
   )}`;
 
   return (

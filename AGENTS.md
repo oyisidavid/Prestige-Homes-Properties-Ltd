@@ -1,8 +1,8 @@
-AGENTS.md — Prestige Homes & Properties Ltd
+AGENTS.md — Femorade Prestige Properties Ltd
 
 1. Executive Context & Brand Identity
 
-Company: Prestige Homes & Properties Ltd
+Company: Femorade Prestige Properties Ltd
 
 Brand Tagline: "...crafting quality, Delivering value"
 
@@ -112,7 +112,7 @@ Lead Routing:
 
 Direct WhatsApp actions must include dynamic URL-encoded pre-filled messages:
 
-https://wa.me/234XXXXXXXXXX?text=Hello%20Prestige%20Homes,%20I%20am%20interested%20in%20[Property-Title]%20in%20[District].
+https://wa.me/234XXXXXXXXXX?text=Hello%20Femorade%20Prestige%20Properties,%20I%20am%20interested%20in%20[Property-Title]%20in%20[District].
 
 5. Frontend Engineering & Quality Guards
 

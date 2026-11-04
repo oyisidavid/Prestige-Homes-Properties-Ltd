@@ -11,7 +11,7 @@ export function Hero() {
   const [selectedBudget, setSelectedBudget] = useState("all");
 
   const whatsappHeroUrl = `https://wa.me/${contactDetails.whatsapp}?text=${encodeURIComponent(
-    "Hello Prestige Homes, I am interested in exploring plot allocations in Apo and Wasa districts."
+    "Hello Femorade Prestige Properties, I am interested in exploring plot allocations in Apo and Wasa districts."
   )}`;
 
   return (
@@ -37,7 +37,7 @@ export function Hero() {
               Institutional <span className="text-brand-forest">Land Banking</span> & Master-Planned Estates in Abuja
             </h1>
             <p className="text-base sm:text-lg text-text-secondary leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Prestige Homes & Properties Ltd delivers verified FCDA C of O land titles, solar-powered infrastructure, and structured installment payment plans across FCT Abuja growth corridors.
+              Femorade Prestige Properties Ltd delivers verified FCDA C of O land titles, solar-powered infrastructure, and structured installment payment plans across FCT Abuja growth corridors.
             </p>
 
             {/* Value Checkpoints */}
@@ -77,7 +77,7 @@ export function Hero() {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3] group bg-slate-900">
               <Image
                 src="/images/banner.jpg"
-                alt="Prestige Homes & Properties Ltd Official Masterplan Header Banner"
+                alt="Femorade Prestige Properties Ltd Official Masterplan Header Banner"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 priority

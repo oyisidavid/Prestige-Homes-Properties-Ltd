@@ -1,4 +1,4 @@
-# DESIGN.md — Prestige Homes & Properties Ltd Design System
+# DESIGN.md — Femorade Prestige Properties Ltd Design System
 
 ## 1. Visual Archetype & Brand Identity
 - **Archetype**: Institutional, high-trust commercial real estate. Balances high-conversion real estate mechanics (metrics, clear land titles, flexible installment plans) with an elevated, premium architectural aesthetic.

@@ -28,7 +28,7 @@ export function WhyChooseUs() {
         {/* Section Header */}
         <div className="text-center space-y-3 max-w-2xl mx-auto mb-10 sm:mb-12">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-text-primary tracking-tight">
-            Why Choose <span className="text-brand-forest">Prestige Homes?</span>
+            Why Choose <span className="text-brand-forest">Femorade Prestige Properties?</span>
           </h2>
           <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
             We&apos;re committed to helping you make smart property investments with confidence.

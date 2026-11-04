@@ -2,15 +2,15 @@
 name: real-estate-ui
 description: >-
   Design, build, refine, and audit high-converting, institutional-grade real estate web components
-  and layouts for Prestige Homes & Properties Ltd (Abuja, Nigeria). Use this skill whenever creating or
+  and layouts for Femorade Prestige Properties Ltd (Abuja, Nigeria). Use this skill whenever creating or
   modifying property listing cards, hero search bars, district filter chips, trust ribbons, inspection forms,
   or enforcing brand visual identity and accessibility standards.
 ---
 
-# Prestige Homes & Properties — Real Estate UI Design Skill
+# Femorade Prestige Properties — Real Estate UI Design Skill
 
 ## Overview
-This skill provides comprehensive guidelines, visual design tokens, responsive layout rules, component blueprints, and quality verification checklists for creating high-converting, institutional-grade real estate user interfaces for **Prestige Homes & Properties Ltd** in Federal Capital Territory (FCT), Abuja, Nigeria.
+This skill provides comprehensive guidelines, visual design tokens, responsive layout rules, component blueprints, and quality verification checklists for creating high-converting, institutional-grade real estate user interfaces for **Femorade Prestige Properties Ltd** in Federal Capital Territory (FCT), Abuja, Nigeria.
 
 ---
 
@@ -80,7 +80,7 @@ Every real estate UI component MUST be explicitly implemented and verified acros
      - `FCDA Approved Layout`
 4. **Lead Routing & Conversion**:
    - Direct WhatsApp actions must use dynamically pre-filled URL-encoded messages:
-     `https://wa.me/234XXXXXXXXXX?text=Hello%20Prestige%20Homes,%20I%20am%20interested%20in%20[Property-Title]%20in%20[District].`
+     `https://wa.me/234XXXXXXXXXX?text=Hello%20Femorade%20Prestige%20Properties,%20I%20am%20interested%20in%20[Property-Title]%20in%20[District].`
 
 ---
 

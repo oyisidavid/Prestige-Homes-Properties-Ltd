@@ -7,7 +7,7 @@ import { contactDetails } from "@/data/properties";
 
 export function InspectionCTA() {
   const whatsappUrl = `https://wa.me/${contactDetails.whatsapp}?text=${encodeURIComponent(
-    "Hello Prestige Homes, I would like to schedule a site inspection for your Abuja estates."
+    "Hello Femorade Prestige Properties, I would like to schedule a site inspection for your Abuja estates."
   )}`;
 
   return (

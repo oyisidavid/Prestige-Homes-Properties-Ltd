@@ -131,7 +131,7 @@ export function PropertiesCatalogClient() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {filteredEstates.map((estate) => {
             const whatsappUrl = `https://wa.me/${contactDetails.whatsapp}?text=${encodeURIComponent(
-              `Hello Prestige Homes, I am inquiring about ${estate.name} in ${estate.district}.`
+              `Hello Femorade Prestige Properties, I am inquiring about ${estate.name} in ${estate.district}.`
             )}`;
 
             return (

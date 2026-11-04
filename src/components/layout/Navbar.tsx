@@ -42,7 +42,7 @@ export function Navbar() {
               <ShieldCheck className="w-3 h-3 text-white" /> FCDA Verified
             </span>
             <span className="text-emerald-100/90 text-xs truncate">
-              Prestige Homes & Properties Ltd — Federal Capital Territory (FCT) Abuja
+              Femorade Prestige Properties Ltd — Federal Capital Territory (FCT) Abuja
             </span>
           </div>
 
@@ -88,12 +88,12 @@ export function Navbar() {
         <Link
           href="/"
           className="flex items-center gap-2 sm:gap-2.5 group focus-visible:ring-2 focus-visible:ring-brand-forest focus-visible:outline-none rounded-xl p-1 transition-transform hover:scale-[1.01] shrink-0"
-          aria-label="Prestige Homes & Properties Ltd Homepage"
+          aria-label="Femorade Prestige Properties Ltd Homepage"
         >
           <div className="relative h-8 sm:h-9 lg:h-11 w-auto aspect-[625/460] shrink-0 flex items-center">
             <Image
               src="/images/logo-emblem.png"
-              alt="Prestige Homes & Properties Ltd"
+              alt="Femorade Prestige Properties Ltd"
               width={100}
               height={74}
               className="h-8 sm:h-9 lg:h-11 w-auto object-contain drop-shadow-sm"
@@ -103,10 +103,10 @@ export function Navbar() {
           <div className="flex flex-col justify-center">
             <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-1.5 leading-none">
               <span className="text-sm sm:text-base lg:text-[17px] font-black text-brand-forest tracking-tight uppercase">
-                Prestige Homes
+                Femorade Prestige
               </span>
               <span className="text-[10px] sm:text-[11px] lg:text-xs font-black text-slate-800 tracking-wider uppercase mt-0.5 sm:mt-0">
-                & Properties Ltd
+                Properties Ltd
               </span>
             </div>
             <span className="text-[8px] sm:text-[8.5px] lg:text-[9.5px] font-serif italic text-brand-gold font-bold leading-tight mt-0.5 sm:mt-1 block">

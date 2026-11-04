@@ -15,12 +15,12 @@ export function Footer() {
             <Link
               href="/"
               className="inline-flex items-center gap-3 sm:gap-3.5 group focus-visible:ring-2 focus-visible:ring-brand-forest focus-visible:outline-none rounded-xl transition-transform hover:scale-[1.01]"
-              aria-label="Prestige Homes & Properties Ltd Homepage"
+              aria-label="Femorade Prestige Properties Ltd Homepage"
             >
               <div className="relative h-12 sm:h-14 w-auto aspect-[625/460] shrink-0 flex items-center">
                 <Image
                   src="/images/logo-emblem.png"
-                  alt="Prestige Homes & Properties Ltd"
+                  alt="Femorade Prestige Properties Ltd"
                   width={130}
                   height={96}
                   className="h-12 sm:h-14 w-auto object-contain drop-shadow"
@@ -29,10 +29,10 @@ export function Footer() {
               <div className="flex flex-col justify-center">
                 <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-1.5 leading-none">
                   <span className="text-base sm:text-lg lg:text-xl font-black text-white tracking-tight uppercase">
-                    Prestige Homes
+                    Femorade Prestige
                   </span>
                   <span className="text-xs sm:text-sm lg:text-base font-black text-emerald-400 tracking-wider uppercase mt-0.5 sm:mt-0">
-                    & Properties Ltd
+                    Properties Ltd
                   </span>
                 </div>
                 <span className="text-[10px] sm:text-[11px] font-serif italic text-brand-gold font-bold leading-tight mt-1">
@@ -65,7 +65,7 @@ export function Footer() {
                   href="/about"
                   className="hover:text-emerald-400 transition-colors focus-visible:ring-2 focus-visible:ring-brand-forest rounded-md px-1 py-0.5 inline-block"
                 >
-                  About Prestige Homes
+                  About Femorade Prestige Properties
                 </Link>
               </li>
               <li>

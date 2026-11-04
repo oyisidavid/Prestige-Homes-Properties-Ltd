@@ -15,14 +15,14 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(contactDetails.website),
   title: {
-    default: "Prestige Homes & Properties Ltd | Verifiable FCDA Land Banking in Abuja",
-    template: "%s | Prestige Homes & Properties Ltd",
+    default: "Femorade Prestige Properties Ltd | Verifiable FCDA Land Banking in Abuja",
+    template: "%s | Femorade Prestige Properties Ltd",
   },
   description:
-    "Prestige Homes & Properties Ltd crafts high-quality residential duplexes, master-planned solar estates, and verified FCDA C of O land banking plots across FCT Abuja (Solar City Apo, The Embassy Wasa, Peace Crest Kabusa).",
+    "Femorade Prestige Properties Ltd crafts high-quality residential duplexes, master-planned solar estates, and verified FCDA C of O land banking plots across FCT Abuja (Solar City Apo, The Embassy Wasa, Peace Crest Kabusa).",
   keywords: [
-    "Prestige Homes & Properties Ltd",
-    "Prestige Homes Abuja",
+    "Femorade Prestige Properties Ltd",
+    "Femorade Prestige Properties Abuja",
     "Real Estate Developers Abuja",
     "Land for Sale in Abuja",
     "FCDA C of O Land Abuja",
@@ -38,18 +38,18 @@ export const metadata: Metadata = {
     "Verified Real Estate Company Abuja",
     "FCT Abuja Land Titles",
   ],
-  authors: [{ name: "Prestige Homes & Properties Ltd", url: contactDetails.website }],
-  creator: "Prestige Homes & Properties Ltd",
-  publisher: "Prestige Homes & Properties Ltd",
+  authors: [{ name: "Femorade Prestige Properties Ltd", url: contactDetails.website }],
+  creator: "Femorade Prestige Properties Ltd",
+  publisher: "Femorade Prestige Properties Ltd",
   alternates: {
     canonical: "./",
   },
   openGraph: {
-    title: "Prestige Homes & Properties Ltd | Verifiable FCDA Land Banking in Abuja",
+    title: "Femorade Prestige Properties Ltd | Verifiable FCDA Land Banking in Abuja",
     description:
       "High-quality residential duplexes, master-planned solar estates, and verified FCDA C of O land banking plots across FCT Abuja (Solar City Apo, The Embassy Wasa, Peace Crest Kabusa).",
     url: contactDetails.website,
-    siteName: "Prestige Homes & Properties Ltd",
+    siteName: "Femorade Prestige Properties Ltd",
     locale: "en_NG",
     type: "website",
     images: [
@@ -57,13 +57,13 @@ export const metadata: Metadata = {
         url: "/images/banner.jpg",
         width: 1200,
         height: 630,
-        alt: "Prestige Homes & Properties Ltd — Verified Abuja Estates",
+        alt: "Femorade Prestige Properties Ltd — Verified Abuja Estates",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Prestige Homes & Properties Ltd | Abuja Real Estate & Land Banking",
+    title: "Femorade Prestige Properties Ltd | Abuja Real Estate & Land Banking",
     description:
       "High-quality residential duplexes, master-planned solar estates, and verified FCDA C of O land banking plots across FCT Abuja.",
     images: ["/images/banner.jpg"],

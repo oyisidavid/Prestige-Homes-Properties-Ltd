@@ -7,7 +7,7 @@ export function FloatingWhatsApp() {
   const [isHovered, setIsHovered] = useState(false);
 
   const defaultMessage = encodeURIComponent(
-    "Hello Prestige Homes & Properties Ltd, I am inquiring about verified Abuja estates and plot allocation."
+    "Hello Femorade Prestige Properties Ltd, I am inquiring about verified Abuja estates and plot allocation."
   );
   const whatsappUrl = `https://wa.me/${contactDetails.whatsapp}?text=${defaultMessage}`;
 
@@ -22,8 +22,8 @@ export function FloatingWhatsApp() {
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        title="Chat with Prestige Homes & Properties Ltd on WhatsApp"
-        aria-label="Chat with Prestige Homes & Properties Ltd on WhatsApp"
+        title="Chat with Femorade Prestige Properties Ltd on WhatsApp"
+        aria-label="Chat with Femorade Prestige Properties Ltd on WhatsApp"
         className="w-14 h-14 sm:w-16 sm:h-16 lg:w-auto lg:h-auto p-0 lg:py-3 lg:pl-3.5 lg:pr-5 rounded-full flex items-center justify-center lg:gap-3 bg-[#25D366] hover:bg-[#20BA59] text-white shadow-2xl shadow-emerald-950/40 transition-all duration-300 transform hover:scale-105 active:scale-95 border-2 border-white/80 focus-visible:ring-4 focus-visible:ring-[#25D366]/40 focus-visible:outline-none"
       >
         {/* WhatsApp Official Logo SVG */}

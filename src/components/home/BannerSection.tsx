@@ -16,7 +16,7 @@ export function BannerSection() {
             <span>FCT Abuja Infrastructure & Masterplan</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Prestige Homes <span className="text-brand-forest">Development Overview</span>
+            Femorade Prestige Properties <span className="text-brand-forest">Development Overview</span>
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 font-medium">
             Official infrastructure masterplan showcasing asphalt road networks, perimeter fencing, and solar grid layouts for Apo and Wasa District estates.
@@ -27,7 +27,7 @@ export function BannerSection() {
         <div className="relative w-full rounded-3xl overflow-hidden shadow-2xl border border-surface-border bg-slate-50 transition-all hover:shadow-3xl">
           <Image
             src="/images/banner.jpg"
-            alt="Prestige Homes & Properties Ltd Official Estate Masterplan Banner"
+            alt="Femorade Prestige Properties Ltd Official Estate Masterplan Banner"
             width={1920}
             height={800}
             className="w-full h-auto object-cover rounded-3xl"

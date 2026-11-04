@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: PropertyDetailPageProps): Pro
 
   if (!estate) {
     return {
-      title: "Property Not Found | Prestige Homes & Properties Ltd",
+      title: "Property Not Found | Femorade Prestige Properties Ltd",
     };
   }
 
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: PropertyDetailPageProps): Pro
       canonical: `/properties/${estate.slug}`,
     },
     openGraph: {
-      title: `${estate.name} — ${estate.district}, Abuja | Prestige Homes`,
+      title: `${estate.name} — ${estate.district}, Abuja | Femorade Prestige Properties`,
       description,
       url: propertyUrl,
       images: [
@@ -82,7 +82,7 @@ export default async function PropertyDetailPage({ params }: PropertyDetailPageP
   };
 
   const whatsappUrl = `https://wa.me/${contactDetails.whatsapp}?text=${encodeURIComponent(
-    `Hello Prestige Homes, I am interested in plot allocation and payment plans for ${estate.name} in ${estate.district}.`
+    `Hello Femorade Prestige Properties, I am interested in plot allocation and payment plans for ${estate.name} in ${estate.district}.`
   )}`;
 
   const propertyJsonLd = {

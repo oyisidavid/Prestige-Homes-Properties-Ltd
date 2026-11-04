@@ -6,16 +6,16 @@ import { ShieldCheck, Building2, MapPin, Award, CheckCircle2, ArrowRight } from 
 import { contactDetails } from "@/data/properties";
 
 export const metadata: Metadata = {
-  title: "About Prestige Homes & Properties Ltd | Abuja Real Estate Developers",
+  title: "About Femorade Prestige Properties Ltd | Abuja Real Estate Developers",
   description:
-    "Learn about Prestige Homes & Properties Ltd, our corporate vision, FCDA legal title compliance, and institutional land banking developments across Abuja, FCT Nigeria.",
+    "Learn about Femorade Prestige Properties Ltd, our corporate vision, FCDA legal title compliance, and institutional land banking developments across Abuja, FCT Nigeria.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
-    title: "About Prestige Homes & Properties Ltd — Abuja Real Estate Leaders",
+    title: "About Femorade Prestige Properties Ltd — Abuja Real Estate Leaders",
     description:
-      "Prestige Homes & Properties Ltd is a premier real estate development and land banking firm head-quartered in Apo, Abuja, Nigeria.",
+      "Femorade Prestige Properties Ltd is a premier real estate development and land banking firm head-quartered in Apo, Abuja, Nigeria.",
     url: `${contactDetails.website}/about`,
     images: ["/images/banner.jpg"],
   },
@@ -33,13 +33,13 @@ export default function AboutPage() {
               <span>Corporate Profile & Compliance</span>
             </div>
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
-              Prestige Homes & Properties Ltd
+              Femorade Prestige Properties Ltd
             </h1>
             <p className="font-serif italic text-lg sm:text-xl text-brand-gold font-medium">
               {contactDetails.tagline}
             </p>
             <p className="text-sm sm:text-base text-emerald-100 leading-relaxed pt-2">
-              Prestige Homes & Properties Ltd is a premier real estate development and institutional land banking firm head-quartered in Federal Capital Territory (FCT), Abuja, Nigeria. We bridge high-trust land acquisition with master-planned solar infrastructure.
+              Femorade Prestige Properties Ltd is a premier real estate development and institutional land banking firm head-quartered in Federal Capital Territory (FCT), Abuja, Nigeria. We bridge high-trust land acquisition with master-planned solar infrastructure.
             </p>
           </div>
         </div>

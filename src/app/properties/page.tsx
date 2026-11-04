@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     canonical: "/properties",
   },
   openGraph: {
-    title: "Abuja Estates & Land Banking Catalog | Prestige Homes & Properties Ltd",
+    title: "Abuja Estates & Land Banking Catalog | Femorade Prestige Properties Ltd",
     description:
       "Explore verified FCDA C of O property subdivisions, smart duplex plots, and master-planned land banking opportunities across FCT Abuja.",
     url: `${contactDetails.website}/properties`,
@@ -20,13 +20,13 @@ export const metadata: Metadata = {
         url: "/images/banner.jpg",
         width: 1200,
         height: 630,
-        alt: "Prestige Homes Property Catalog Abuja",
+        alt: "Femorade Prestige Properties Property Catalog Abuja",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abuja Estates & Property Catalog | Prestige Homes",
+    title: "Abuja Estates & Property Catalog | Femorade Prestige Properties",
     description:
       "Explore verified FCDA C of O property subdivisions, smart duplex plots, and master-planned land banking opportunities in Abuja.",
     images: ["/images/banner.jpg"],

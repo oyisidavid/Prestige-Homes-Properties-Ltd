@@ -58,7 +58,7 @@ export function FeaturedEstates() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
           {homeFeaturedEstates.map((estate) => {
             const whatsappUrl = `https://wa.me/${contactDetails.whatsapp}?text=${encodeURIComponent(
-              `Hello Prestige Homes, I am interested in plot allocation options for ${estate.name} in ${estate.district}.`
+              `Hello Femorade Prestige Properties, I am interested in plot allocation options for ${estate.name} in ${estate.district}.`
             )}`;
 
             return (

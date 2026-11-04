@@ -31,7 +31,7 @@ export function ContactClientView() {
   };
 
   const whatsappDirectUrl = `https://wa.me/${contactDetails.whatsapp}?text=${encodeURIComponent(
-    `Hello Prestige Homes, I requested a site inspection for ${selectedEstate}. Name: ${fullName}, Phone: ${phone}, Mode: ${inspectionType}, Date: ${preferredDate || "Earliest Available"}. Details: ${message}`
+    `Hello Femorade Prestige Properties, I requested a site inspection for ${selectedEstate}. Name: ${fullName}, Phone: ${phone}, Mode: ${inspectionType}, Date: ${preferredDate || "Earliest Available"}. Details: ${message}`
   )}`;
 
   return (
@@ -44,7 +44,7 @@ export function ContactClientView() {
             <span>Abuja Corporate Headquarters</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-text-primary tracking-tight">
-            Contact <span className="text-brand-forest">Prestige Homes</span>
+            Contact <span className="text-brand-forest">Femorade Prestige Properties</span>
           </h1>
           <p className="text-sm sm:text-base text-text-secondary leading-relaxed max-w-2xl">
             Get in touch with our land advisory officers for FCDA title verification, plot allocation schedules, and site visit arrangements.
@@ -118,7 +118,7 @@ export function ContactClientView() {
               <div className="pt-2 border-t border-white/15">
                 <a
                   href={`https://wa.me/${contactDetails.whatsapp}?text=${encodeURIComponent(
-                    "Hello Prestige Homes, I want to inquire about site inspection and plot allocations."
+                    "Hello Femorade Prestige Properties, I want to inquire about site inspection and plot allocations."
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"

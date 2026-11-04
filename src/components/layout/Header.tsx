@@ -10,7 +10,7 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const formattedWhatsappUrl = `https://wa.me/${contactDetails.whatsapp}?text=${encodeURIComponent(
-    "Hello Prestige Homes, I am inquiring about verified land banking and estate developments in Abuja."
+    "Hello Femorade Prestige Properties, I am inquiring about verified land banking and estate developments in Abuja."
   )}`;
 
   return (
@@ -47,11 +47,11 @@ export function Header() {
         <Link href="/" className="flex flex-col group focus-visible:ring-2 focus-visible:ring-brand-forest rounded-lg p-1">
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-lg bg-brand-forest flex items-center justify-center text-white font-extrabold text-xl shadow-md group-hover:bg-brand-forest-dark transition-colors">
-              P
+              F
             </div>
             <div className="flex flex-col">
               <span className="font-extrabold text-xl lg:text-2xl text-text-primary tracking-tight leading-none">
-                PRESTIGE <span className="text-brand-forest">HOMES</span>
+                FEMORADE PRESTIGE <span className="text-brand-forest">PROPERTIES</span>
               </span>
               <span className="font-serif italic text-[11px] text-brand-gold font-medium leading-tight mt-0.5">
                 ...crafting quality, Delivering value

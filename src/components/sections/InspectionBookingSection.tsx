@@ -21,7 +21,7 @@ export function InspectionBookingSection() {
   const currentEstate = featuredEstates.find((e) => e.id === selectedEstateId) || featuredEstates[0];
 
   const whatsappDirectUrl = `https://wa.me/${contactDetails.whatsapp}?text=${encodeURIComponent(
-    `Hello Prestige Homes, I submitted an inspection request for ${currentEstate.name} (${currentEstate.district}). Name: ${fullName}, Phone: ${phone}, Date: ${date}`
+    `Hello Femorade Prestige Properties, I submitted an inspection request for ${currentEstate.name} (${currentEstate.district}). Name: ${fullName}, Phone: ${phone}, Date: ${date}`
   )}`;
 
   return (
