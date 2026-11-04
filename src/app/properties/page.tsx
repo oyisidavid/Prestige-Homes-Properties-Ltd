@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     url: `${contactDetails.website}/properties`,
     images: [
       {
-        url: "/images/banner.jpg",
+        url: "/images/solar-city-apo.jpg",
         width: 1200,
         height: 630,
         alt: "Femorade Prestige Properties Property Catalog Abuja",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "Abuja Estates & Property Catalog | Femorade Prestige Properties",
     description:
       "Explore verified FCDA C of O property subdivisions, smart duplex plots, and master-planned land banking opportunities in Abuja.",
-    images: ["/images/banner.jpg"],
+    images: ["/images/solar-city-apo.jpg"],
   },
 };
 

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description:
       "Femorade Prestige Properties Ltd is a premier real estate development and land banking firm head-quartered in Apo, Abuja, Nigeria.",
     url: `${contactDetails.website}/about`,
-    images: ["/images/banner.jpg"],
+    images: ["/images/solar-city-apo.jpg"],
   },
 };
 

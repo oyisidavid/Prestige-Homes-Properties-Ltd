@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/banner.jpg",
+        url: "/images/solar-city-apo.jpg",
         width: 1200,
         height: 630,
         alt: "Femorade Prestige Properties Ltd — Verified Abuja Estates",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title: "Femorade Prestige Properties Ltd | Abuja Real Estate & Land Banking",
     description:
       "High-quality residential duplexes, master-planned solar estates, and verified FCDA C of O land banking plots across FCT Abuja.",
-    images: ["/images/banner.jpg"],
+    images: ["/images/solar-city-apo.jpg"],
   },
   robots: {
     index: true,
@@ -101,7 +101,7 @@ export default function RootLayout({
     "legalName": contactDetails.company,
     "url": contactDetails.website,
     "logo": `${contactDetails.website}/images/logo-emblem.png`,
-    "image": `${contactDetails.website}/images/banner.jpg`,
+    "image": `${contactDetails.website}/images/solar-city-apo.jpg`,
     "description":
       "Institutional real estate development, verifiable land banking, and master-planned solar estates across FCT Abuja (Solar City Apo, The Embassy Wasa, Peace Crest Kabusa).",
     "telephone": contactDetails.phone,

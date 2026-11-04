@@ -76,7 +76,7 @@ export function Hero() {
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3] group bg-slate-900">
               <Image
-                src="/images/banner.jpg"
+                src="/images/solar-city-apo.jpg"
                 alt="Femorade Prestige Properties Ltd Official Masterplan Header Banner"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"

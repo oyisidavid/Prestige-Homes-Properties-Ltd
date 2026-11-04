@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     url: `${contactDetails.website}/contact`,
     images: [
       {
-        url: "/images/banner.jpg",
+        url: "/images/solar-city-apo.jpg",
         width: 1200,
         height: 630,
         alt: "Femorade Prestige Properties Ltd Abuja Office",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "Contact Femorade Prestige Properties Ltd | Abuja Real Estate",
     description:
       "Schedule an on-site property inspection or visit our Abuja corporate head office at Ocean Centre, Apo.",
-    images: ["/images/banner.jpg"],
+    images: ["/images/solar-city-apo.jpg"],
   },
 };
 
